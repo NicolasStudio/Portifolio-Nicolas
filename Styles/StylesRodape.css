@@ -1,0 +1,78 @@
+:root {
+    --cor-fundo: #333;
+    --cor-texto: #ffffff;
+    --cor-texto-secundario: #cccccc;
+    --cor-destaque: #ff6600;
+  }
+  
+  /* Contatos */
+  footer {
+    background-color: #555;
+    color: var(--cor-texto);
+    padding: 4% 2%;
+  }
+  
+  .titleRodape {
+    padding: 2%;
+    font-size: clamp(18px, 4vw, 30px);
+    font-weight: 600;
+    text-align: center;
+    color: var(--cor-destaque);
+  }
+  
+  .txtRodape {
+    text-align: center;
+    text-indent: 2em;
+    font-size: clamp(14px, 3vw, 20px);
+    font-weight: 400;
+    color: var(--cor-texto-secundario);
+    padding-bottom: 1%;
+  }
+  
+  .boxRodapeImg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    margin: 3% auto 2%;
+    text-decoration: none;
+  }
+  
+  .boxRodapeImg a {
+    text-decoration: none;
+  }
+  
+  .boxRodapeImg .redeImg {
+    width: 48px;
+    height: 48px;
+    transition: 300ms;
+  }
+  
+  .boxRodapeImg .redeImg:hover {
+    opacity: 0.65;
+    scale: 1.0;
+  }
+
+  
+  footer center {
+    padding-top: 20px;
+    display: flex;
+    gap: 6px;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  /* Links dos créditos */
+  footer center a {
+    color: var(--cor-texto-secundario);
+    font-size: clamp(12px, 2vw, 14px);
+    text-decoration: none;
+    line-height: 1.4;
+  }
+  
+  footer center a:hover {
+    color: var(--cor-destaque);
+
+  }

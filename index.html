@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nicolas de Almeida Sousa">
+    <meta name="description" content="Portifólio do desenvolvedor full stack, Nicolas de Almeida Sousa">
+    <meta name="keywords" content="portifolio, html, css, javascript, full stack, desenvolvedor">
+    <link rel="icon" type="image/png" sizes="16x16"  href="Image/IconPage.png">
+    <title>Nicolas A. Portifolio</title>
+
+    <link rel="stylesheet" href="Styles/Styles.css">
+    <link rel="stylesheet" href="Styles/StyleMenu.css"> <!-- Menu superior -->
+    <link rel="stylesheet" href="Styles/StylesHome.css"> <!-- Inicio -->
+    <link rel="stylesheet" href="Styles/StylesSobre.css"> <!-- Sobre -->
+    <link rel="stylesheet" href="Styles/StylesHabilidades.css"> <!-- Habilidades -->
+    <link rel="stylesheet" href="Styles/StylesProjetos.css"> <!-- Projetos -->
+    <link rel="stylesheet" href="Styles/StylesRodape.css"> <!-- Rodape -->
+    <script defer src="Js/Script.js"></script>
+
+</head>
+<body>  
+    
+    <nav class="navBar">
+        <div class="nomeMenu"><a href="#">Nicolas A.</a></div>
+        <ul class="inicio">
+          <li class="menuLinha"><a href="#home">Início</a></li>
+          <li class="menuLinha"><a href="#sobre">Sobre</a></li>
+          <li class="menuLinha"><a href="#habilidade">Habilidades</a></li>
+          <li class="menuLinha"><a href="#projetos">Projetos</a></li>
+          <li class="menuLinha"><a href="#contatos">Contatos</a></li>
+        </ul>
+      </nav>
+      
+      <div class="boxBurguer">
+            <img src="Image/cardapio.png" alt="menu" class="burguer" onclick="abrirfechar()">
+      </div>
+
+      <div class="inicio__mobile">
+               <ul class="burguer__Link">
+                <li class="menuLinha2"><a href="#home">Inicio</a></li>
+                <li class="menuLinha2"><a href="#sobre">Sobre</a></li>
+                <li class="menuLinha2"><a href="#habilidade">Habilidades</a></li>
+                <li class="menuLinha2"><a href="#projetos">Projetos</a></li>
+                <li class="menuLinha2"><a href="#contatos">Contatos</a></li>  
+            </ul>
+      </div>
+      
+      <section id="home">
+        <div class="boxSaudacao">
+          <div class="saudacaoText">
+            <h1 class="titleSaudacao">
+              Olá visitante! <br>
+              Me chamo Nicolas de Almeida Sousa
+            </h1>
+            <h1 class="titleSaudacao2">Desenvolvedor Full Stack</h1>
+      
+            <p class="saudacaoExplica">
+                Sou desenvolvedor web, sempre em busca de evolução e novos desafios. Para mim, programar é mais do que escrever código — é vivenciar uma jornada de descobertas.
+                Quando me perguntam como é desenvolver, costumo dizer: "Às vezes, nos vemos presos em um problema que parece não ter solução. Mas basta parar, respirar e olhar 
+                com atenção. E quando finalmente resolvemos, a sensação de conquista é simplesmente indescritível."
+            </p>
+          </div>
+      
+          <img class="saudacaoImg" src="Image/nicolas.png" alt="Foto de Nicolas">
+        </div>
+      </section>
+      
+      <section id="sobre">
+        <div class="boxSobre">
+          <div class="titleSobre">
+            <center><h1 class="titleSobre2">Sobre mim:</h1></center>
+            <p class="saudacao" id="saudacao" value="">Boa alguma coisa!</p>
+      
+            <script>
+              const saudacaoMng = window.localStorage.getItem('mensagem');
+              document.getElementById("saudacao").innerHTML = saudacaoMng;
+            </script>
+      
+            <p class="textsobre">
+              Me chamo Nicolas, tenho <span class="calculoIdade" id="idade"> </span> anos e iniciei minha jornada na programação em 2019, por meio do curso técnico em Análise e Desenvolvimento de Sistemas. 
+              Infelizmente, por conta da pandemia, não consegui concluí-lo naquele momento. No entanto, minha paixão pela área só cresceu — e, pouco tempo depois, ingressei na Faculdade das Américas (FAM) para continuar minha formação.
+            </p>
+      
+            <p class="textsobre">
+              Tenho objetivos bem definidos em curto, médio e longo prazo. A curto prazo, estou focado em estudar e praticar continuamente para aprimorar minhas habilidades. 
+              A médio prazo, pretendo concluir minha graduação, iniciar uma pós-graduação e também finalizar o curso técnico. Já a longo prazo, meu sonho é conquistar minha casa própria e me tornar uma referência no mundo da programação.
+            </p>
+          </div>
+          <div class="redeSobre">
+            <center><h1 class="redeSobre2">Redes sociais:</h1></center>
+            <center><p class="textRede2">Conecte-se comigo pelas redes abaixo:</p></center>
+            
+            <div class="boxImg">
+              <center>
+                <a href="https://www.linkedin.com/in/nicolas-almeida-376284244/"> <img class="redeImg" src="Image/linkedin2.png" alt="ERRO"> </a>
+                <a href="https://github.com/NicolasStudio"> <img class="redeImg" src="Image/github2.png" alt="ERRO"> </a>
+                <a href="https://www.instagram.com/nicolas29sousa/"> <img class="redeImg" src="Image/instagram2.png" alt="ERRO"> </a>
+                <a href="https://www.facebook.com/nicolas.almeida.1042/"> <img class="redeImg" src="Image/facebook2.png" alt="ERRO"> </a>
+                <a href="https://api.whatsapp.com/send?phone=11941377733"> <img class="redeImg" src="Image/whatsapp.png" alt="ERRO"> </a>
+              </center>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    <section id="habilidade">
+        <div class="habilidades">
+            <h1 class="titleHabilidade"> Habilidades: </h1>
+                <p class="txtHabilidade"> Essas são as ferramentas de estudo que utilizo no dia-a-dia, que me dão a possibilidade
+                        de usar minha criatividade em prática. Mesmo não mencinado a baixo, gosto de frizar que manter uma relação
+                        interpessoal com seus companheiros de equipe é vital para o sucesso do time. </p>
+        </div>
+
+        <div class="boxConhecimentos">
+            <div class="boxDesenv">
+                <h3 class="textTitle2"> Desenvolvimento web</h3>
+                <center><img src="Image/imgDesenv.png" alt="Erro" class="imgDesenv"></center>
+
+                <div class="boxTodosItens">
+                    <p class="todas ling1">Html</p>
+                    <p class="todas ling2">Css</p>
+                    <p class="todas ling3">JavaScript</p>
+                    <p class="todas ling4">PHP</p>
+                    <p class="todas ling5">Mysql</p>
+                    <p class="todas ling6">JAVA</p>
+                </div>
+            </div>
+
+            <div class="boxFerram">
+                <h3 class="textTitle2"> Ferramentas de desenvolvimento</h3>
+                <center><img src="Image/imgFerram.png" alt="Erro" class="imgDesenv"></center>
+                <div class="boxTodosItens">
+                    <p class="todas ferram1">Visual Studio</p>
+                    <p class="todas ferram2">Sublime</p>
+                    <p class="todas ferram3">Workbench</p>
+                    <p class="todas ferram4">Netbeans</p>
+                    <p class="todas ferram5">Construct 2</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="boxEstudo">
+            <div class="boxFormacao">
+                <center><h1 class="titleFormacao"> Formação Acadêmica:</h1></center>
+                <p class="linhaFormacao"> Ensino médio: (completo).</p>
+                <p class="linhaFormacao"> Curso superior de técnologia em Análise e Desenvolvimento de Sistemas (<a class="linkPdf" href="Image/Certificados/Certificado de Conclusão Graduação - Individual - Chave - PL_Assinado.pdf" target="blank">completo</a>).</p>
+            </div>
+
+            <div class="boxComplementares">
+                <center><h1 class="titleComplementares"> Complementar:</h1></center>
+                <p class="linhaFormacao"> Curso de Html e Css básico: (<a class="linkPdf" href="Image/Certificados/Html básico - (Fundação Bradesco).pdf" target="blank">completo</a>).</p>  
+                <p class="linhaFormacao"> Curso de Html avançado: (<a class="linkPdf" href="Image/Certificados/Html Avançado - (Fundação Bradesco).pdf" target="blank">completo</a>).</p>  
+                <p class="linhaFormacao"> Curso de JavaScript intermediário: (<a class="linkPdf" href="Image/Certificados/Introdução ao JavaScript (Intermediário) - Fundação Bradesco.pdf" target="blank">completo</a>).</p>    
+                <p class="linhaFormacao"> Curso de JAVA básico: (<a class="linkPdf" href="Image/Certificados/Java Basico (40 Horas Certificado Curso em Video).pdf" target="blank">completo</a>).</p>
+                <p class="linhaFormacao"> Curso de Banco de Dados - MySQL: (<a class="linkPdf" href="Image/Certificados/Banco de Dados - MySQL 40 Horas Certificado Curso em Video.pdf" target="blank">completo</a>).</p>
+                <p class="linhaFormacao"> Formação Front-end - HTML, CSS, JavaScript, React e TypeScript com foco em React: (cursando).</p>  
+                <p class="linhaFormacao"> Formação PHP do Zero a Maestria (cursando).</p>  
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos">
+        <div class="projeto"><br>
+            <h1 class="titleProjeto"> Projetos em destaque: </h1>
+                <p class="txtProjeto"> Aqui se encontra projetos que realizei, alguns são jogos para praticar algum
+                        conhecimento ou metodologia nova para mim. Outro projeto que foi criado como solução a um problema que eu e os meus amigos 
+                        tinhamos, quanto a armazenar informações de uma ficha. E para finalizar projeto que foi elaborado junto a cliente, 
+                        onde o mesmo precisava de um espaço de divulgação do seu trabalho.</p> <br><br>
+        </div>
+
+        <div class="boxProjeto1">
+            <div class="boxTexto1">
+                <h3 class="titleProjeto"> Gerador de Dados</h3>
+                <p class="txtProjeto"> Este sistema foi desenvolvido para me auxiliar — e também a outras pessoas — na criação de dados fictícios, porém válidos, destinados a 
+                    testes de cadastros em sistemas. Ele é capaz de gerar automaticamente nome completo, CPF, RG, data de nascimento, telefone fixo, celular e e-mail, todos 
+                    devidamente formatados para facilitar seu uso em ambientes de desenvolvimento. Além disso, inclui um gerador de senhas aleatórias e, mais recentemente, 
+                    passou a contar com um contador de caracteres, oferecendo ainda mais praticidade no dia a dia dos testes.</p>
+                <p class="txtProjeto"> Você pode conferir através do <a href="https://nicolasstudio.github.io/GeradorDeDados/" class="linkGit"> Github.</a></p>
+            </div>
+            <img src="Image/projetos/geradorSenha.png" alt="Erro" class="imgGer" onclick="redirecionar1()">
+        </div>
+
+        <div class="boxProjeto2">
+            <div class="boxTexto2">
+                <h3 class="titleProjeto"> Pizzaria </h3>
+                <p class="txtProjeto"> Esta página foi desenvolvida como parte do meu aprendizado, com o objetivo de praticar novas técnicas de desenvolvimento. Trata-se de 
+                    uma interface para uma pizzaria, que conta com um menu com navegação por ancoragem, permitindo que o usuário explore o cardápio de forma intuitiva. O 
+                    menu é interativo: ao selecionar os itens, os pedidos são adicionados automaticamente ao carrinho. Um dos destaques é a opção de montagem personalizada, 
+                    onde o próprio cliente pode escolher até quatro sabores de pizza, que são adicionados ao carrinho após a confirmação. Ao finalizar o pedido, o sistema 
+                    encaminha automaticamente as informações para a pizzaria via WhatsApp.</p>
+                <p class="txtProjeto"> Você pode conferir através do <a href="https://nicolasstudio.github.io/Pizzaria/" class="linkGit"> Github.</a></p>
+            </div>
+            <img src="Image/projetos/Pizzaria.PNG" alt="Erro" class="imgAdv" onclick="redirecionar2()">
+        </div>
+
+        <div class="boxProjeto1">
+            <div class="boxTexto1">
+                <h3 class="titleProjeto"> Landing page </h3>
+                <p class="txtProjeto"> Este foi o meu primeiro trabalho como desenvolvedor web freelancer, onde tive a oportunidade de entender as necessidades do cliente e 
+                    criar uma landing page para divulgação de seus serviços. Foi um projeto desafiador, especialmente pela necessidade de implementar uma galeria com carrossel 
+                    de imagens. A página conta com navegação por ancoragem nas seções de início, sobre, habilidades, projetos e contatos. Também foi incluído um sistema de 
+                    pop-ups para facilitar a visualização das etapas de construção, proporcionando uma experiência mais intuitiva para os usuários.</p>
+                <p class="txtProjeto"> Você pode conferir através do <a href="https://nicolasstudio.github.io/Nivaldo-Construcao/" class="linkGit"> Github.</a></p>
+            </div>
+            <img src="Image/projetos/portifolio.png" alt="Erro" class="imgObras" onclick="redirecionar3()">
+        </div>
+
+        <div class="boxProjeto2">
+            <div class="boxTexto2">
+                <h3 class="titleProjeto"> Ficha de RPG </h3>
+                <p class="txtProjeto">  Este projeto é um dos meus favoritos, pois sempre tenho alguma ideia para incrementar em seu codigo. Ele surgiu com uma 
+                        solução a um dos problemas que tinhamos em nossas mesas de RPG, precisavamos de algo que pudesse salvar nossas informações e não ficar dependendo
+                        de papeis ou PDF. Seu desenvolvimento foi bem complexo, pois precisava comunicar com banco de dados através do PHP, foi bastante desafiador. </p>
+                <p class="txtProjeto"> Você pode conferir uma versão anterior no <a href="https://nicolasstudio.github.io/Ficha-de-RPG/" class="linkGit"> Github.</a></p>
+                <p class="txtProjeto"> Ou a versão com PHP e Banco de dados no <a href="https://github.com/NicolasStudio/Ficha-RPG-2" class="linkGit"> Github.</a></p>
+            </div>
+            <img src="Image/projetos/ficha.png" alt="Erro" class="imgFicha" onclick="redirecionar4()">
+        </div>
+
+        <div class="boxProjeto1">
+            <div class="boxTexto1">
+                <h3 class="titleProjeto"> Calculadora </h3>
+                <p class="txtProjeto"> Por ultimo e não menos importante, uma calculadora feita em JAVA. Sua criação foi muito boa para utilizar tudo o que aprendi 
+                    no curso de JAVA básico, além de ter uma função onde podemos alterar sua cor. </p>
+                <p class="txtProjeto"> Você pode conferir através do <a href="https://github.com/NicolasStudio/Calculadora" class="linkGit"> Github.</a></p>
+            </div>
+           <img src="Image/projetos/calc.png" alt="Erro" class="imgCalc" onclick="redirecionar5()">
+        </div>
+
+        <div class="boxProjeto2">
+            <div class="boxTexto2">
+                <h3 class="titleProjeto"> Batalha Naval </h3>
+                <p class="txtProjeto"> Este foi um dos jogos mais desafiadores e intrigantes que desenvolvi, exigindo bastante lógica e atenção aos detalhes ao longo 
+                    do processo. Nele, você pode se divertir jogando o clássico Batalha Naval, totalmente recriado para a web de forma interativa e dinâmica. </p>
+                <p class="txtProjeto"> Você pode conferir através do <a href="https://nicolasstudio.github.io/Batalha-Naval/" class="linkGit"> Github.</a></p>
+            </div>
+           <img src="Image/projetos/batalha.PNG" alt="Erro" class="imgBatalha" onclick="redirecionar6()">
+        </div>
+
+        <div class="boxProjeto1">
+            <div class="boxTexto1">
+                <h3 class="titleProjeto"> Livraria </h3>
+                <p class="txtProjeto"> Esta é uma página voltada para a venda de e-books, com sistema de cadastro de usuários e funcionalidades completas de gerenciamento de 
+                    livros, incluindo inclusão, edição e exclusão. O layout conta com menus organizados em carrossel, integrados a um banco de dados para garantir dinamismo e 
+                    atualização em tempo real. Além disso, a plataforma permite a atualização de dados cadastrais tanto para usuários convencionais quanto para administradores. 
+                    O sistema também já conta com uma forma de pagamento integrada, oferecendo uma experiência completa e funcional. </p>
+                <p class="txtProjeto"> Versão com PHP e Banco de dados no  <a href="https://github.com/NicolasStudio/Livraria?tab=readme-ov-file" class="linkGit"> Github.</a></p>
+            </div>
+           <img src="Image/projetos/Livraria.png" alt="Erro" class="imgLivraria" onclick="redirecionar7()">
+        </div>
+    </section>
+
+</body>
+
+<section id="contatos">
+    <footer class="rodape">
+        <h1 class="titleRodape"> Alguma dúvida?</h1>
+        <p class="txtRodape"> Obrigado pela sua atenção, aqui vai alguns dos meus contatos:</p>
+        <p class="txtRodape"> Email: nicolasalmeida1@yahoo.com</p>
+        <p class="txtRodape"> WhatsApp: (11) 94137-7733</p>
+        <div class="boxRodapeImg">
+            <a href="https://www.linkedin.com/in/nicolas-almeida-376284244/"> <img class="redeImg" src="Image/linkedin2.png" alt="ERRO"> </a>
+            <a href="https://github.com/NicolasStudio"> <img class="redeImg" src="Image/github2.png" alt="ERRO"> </a>
+            <a href="https://www.instagram.com/nicolas29sousa/"> <img class="redeImg" src="Image/instagram2.png" alt="ERRO"> </a>
+            <a href="https://www.facebook.com/nicolas.almeida.1042/"> <img class="redeImg" src="Image/facebook2.png" alt="ERRO"> </a>
+            <a href="https://api.whatsapp.com/send?phone=11941377733"> <img class="redeImg" src="Image/whatsapp.png" alt="ERRO"> </a>
+        </div>
+        <p class="txtRodape">  ©Nicolas de Almeida Sousa. Todos os direitos Reservados.</p>   
+          
+        <center>
+        <a href="https://www.flaticon.com/br/icones-gratis/linkedin" title="linkedin ícones">Linkedin ícones criados por IconsBox - Flaticon</a> //
+        <a href="https://www.flaticon.com/br/icones-gratis/facebook" title="facebook ícones">Facebook ícones criados por justicon - Flaticon</a> //
+        <a href="https://www.flaticon.com/br/icones-gratis/logotipo-do-instagram" title="logotipo do instagram ícones">Logotipo do instagram ícones criados por justicon - Flaticon</a> //
+        <a href="https://www.flaticon.com/br/icones-gratis/github" title="github ícones">Github ícones criados por Freepik - Flaticon</a>
+        </center>
+    </footer>
+</section>
+</html>

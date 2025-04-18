@@ -1,0 +1,125 @@
+:root {
+    --cor-fundo: #333;
+    --cor-texto: #ffffff;
+    --cor-texto-secundario: #cccccc;
+    --cor-destaque: #ff6600;
+}
+
+/* Container principal da seção de projetos */
+#projetos {
+    padding: 60px 20px;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+/* Cabeçalho da seção */
+.projeto {
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+}
+  
+.titleProjeto {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--cor-destaque);
+}
+  
+.txtProjeto {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--cor-texto-secundario);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+  /* Estilo base de cada projeto */
+[class^="boxProjeto"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 40px auto;
+    flex-wrap: wrap;
+    transition: transform 0.3s ease;
+}
+  
+[class^="boxProjeto"]:hover {
+    transform: scale(1.01);
+}
+
+/* Alterna layout dos projetos pares */
+.boxProjeto {
+    flex-direction: row-reverse;
+}
+  
+/* Estilos para textos dos projetos */
+[class^="boxTexto"] {
+    flex: 1 1 300px;
+    max-width: 600px;
+}
+  
+.titleProjeto {
+    font-size: 1.8rem;
+    color: var(--cor-destaque);
+    margin-bottom: 15px;
+}
+  
+.txtProjeto {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ddd;
+    margin-bottom: 10px;
+}
+  
+.linkGit {
+    color: var(--cor-destaque);
+    text-decoration: underline;
+}
+  
+  /* Estilos para as imagens dos projetos */
+.imgGer, .imgAdv, .imgObras, .imgFicha, .imgCalc, .imgBatalha, .imgLivraria{
+    flex: 1 1 300px;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .imgGer, .imgAdv, .imgObras, .imgFicha, .imgCalc, .imgBatalha, .imgLivraria:hover {
+    transform: scale(1.03);
+  }
+  
+  /* Responsividade: tablets e celulares */
+  @media screen and (max-width: 991px) {
+    [class^="boxProjeto"] {
+      flex-direction: column !important;
+      text-align: center;
+    }
+  
+    [class^="boxTexto"] {
+      max-width: 100%;
+    }
+  
+    [class^="img"] {
+      max-width: 100%;
+    }
+  
+    .titleProjeto {
+      font-size: 2rem;
+    }
+  
+    .titleprojeto {
+      font-size: 1.5rem;
+    }
+  
+    .txtProjeto{
+      font-size: 1rem;
+    }
+  }
+  

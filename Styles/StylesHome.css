@@ -1,0 +1,98 @@
+#home {
+    padding: 8% 5%;
+  }
+  
+  .boxSaudacao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* permite quebra para mobile */
+    gap: 40px;
+  }
+  
+  .saudacaoText {
+    flex: 1 1 500px;
+    font-size: clamp(18px, 4vw, 24px);
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .titleSaudacao {
+    margin-bottom: 10px;
+    color: #222;
+  }
+  
+  .titleSaudacao2 {
+    display: inline-block;
+    white-space: nowrap;
+    border-right: 3px solid #222;
+    animation: typing 2.8s steps(22, end) 1s 1 normal both, blinkCursor 600ms step-end infinite;
+    overflow: hidden;
+    color: #000;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 14.5em; /* ajuste fino baseado no conteúdo */
+    }
+  }
+  
+  @keyframes blinkCursor {
+    0%, 100% {
+      border-right-color: transparent;
+    }
+    50% {
+      border-right-color: #222;
+    }
+  }
+  
+  .saudacaoExplica {
+    text-align: justify;
+    margin-top: 20px;
+    font-size: clamp(14px, 3.5vw, 20px);
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .saudacaoImg {
+    flex: 0 0 auto;
+    width: 35%;
+    max-width: 400px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding: 8px;
+    border: #ff6600 solid 5px;
+    box-shadow: -8px 8px 0 #333;
+    background-color: transparent;
+    transition: background-color 0.9s ease;
+    cursor: pointer;
+  }
+  
+  .saudacaoImg:hover {
+    background-color: #ff6600;
+  }
+  
+  /* Responsivo para tablets e celulares */
+  @media (max-width: 768px) {
+    .boxSaudacao {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .saudacaoText {
+      width: 100%;
+    }
+  
+    .saudacaoImg {
+      width: 60%;
+      margin-top: 30px;
+    }
+  
+    .titleSaudacao2 {
+      margin: 0 auto;
+    }
+  }
+  
