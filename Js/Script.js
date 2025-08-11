@@ -54,7 +54,6 @@ function horaSaudacao() {
   window.localStorage.setItem("mensagem", mensagem);
 }
 
-
 // ==============================
 // Abrir e Fechar Menu Mobile
 // ==============================
@@ -62,7 +61,6 @@ function abrirfechar() {
   const menuMobile = document.querySelector(".inicio__mobile");
   menuMobile.classList.toggle("ativo");
 }
-
 
 // ==============================
 // Atualizar idade automaticamente
@@ -83,7 +81,6 @@ function atualizarIdade() {
 }
 
 atualizarIdade();
-
 
 // ==============================
 // Redirecionamentos para projetos
@@ -114,4 +111,8 @@ function redirecionar6() {
 
 function redirecionar7() {
   window.open("https://github.com/NicolasStudio/Livraria?tab=readme-ov-file");
+}
+
+function redirecionar8() {
+  window.open("https://nicolasstudio.github.io/Zer0Kcalc/");
 }
