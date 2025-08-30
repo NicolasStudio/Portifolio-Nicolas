@@ -1,6 +1,6 @@
 :root {
     --cor-fundo: #333;
-    --cor-texto: #ffffff;
+    --cor-texto: #ddd;
     --cor-texto-secundario: #cccccc;
     --cor-destaque: #ff6600;
 }
@@ -19,14 +19,14 @@
     text-align: center;
 }
   
-.titleProjeto {
-    font-size: 2.5rem;
+.titleProjetoPrincipal {
+    font-size: 30px;
     margin-bottom: 15px;
     color: var(--cor-destaque);
 }
   
 .txtProjeto {
-    font-size: 1.1rem;
+    font-size: 16px;
     line-height: 1.6;
     color: var(--cor-texto-secundario);
     max-width: 800px;
@@ -64,16 +64,17 @@
 }
   
 .titleProjeto {
-    font-size: 1.8rem;
+    font-size: 22px;
     color: var(--cor-destaque);
     margin-bottom: 15px;
 }
   
 .txtProjeto {
-    font-size: 1.1rem;
+    font-size: 16px;
     line-height: 1.6;
-    color: #ddd;
+    color: var(--cor-texto);
     margin-bottom: 10px;
+    text-align: justify;
 }
   
 .linkGit {
@@ -111,15 +112,12 @@
     }
   
     .titleProjeto {
-      font-size: 2rem;
-    }
-  
-    .titleprojeto {
-      font-size: 1.5rem;
+      font-size: 22px;
     }
   
     .txtProjeto{
-      font-size: 1rem;
+      font-size: 16px;
+      text-align: justify;
     }
   }
   

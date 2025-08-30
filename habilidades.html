@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nicolas de Almeida Sousa">
+    <meta name="description" content="Portifólio do desenvolvedor full stack, Nicolas de Almeida Sousa">
+    <meta name="keywords" content="portifolio, html, css, javascript, full stack, desenvolvedor">
+    <link rel="icon" type="image/png" sizes="16x16"  href="Image/IconPage.png">
+    <title>Nicolas A. Portifolio</title>
+
+    <link rel="stylesheet" href="Styles/Styles.css">
+    <link rel="stylesheet" href="Styles/StyleMenu.css"> <!-- Menu superior -->
+    <link rel="stylesheet" href="Styles/StylesHome.css"> <!-- Inicio -->
+    <link rel="stylesheet" href="Styles/StylesHabilidades.css"> <!-- Habilidades -->
+    <link rel="stylesheet" href="Styles/StylesRodape.css"> <!-- Rodape -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script defer src="Js/Script.js"></script>
+</head>
+<body>  
+    
+    <nav class="navBar">
+        <div class="nomeMenu"><a href="index.html">Nicolas A.</a></div>
+        <ul class="inicio">
+          <li class="menuLinha"><a href="index.html">Início</a></li>
+          <li class="menuLinha"><a href="sobre.html">Sobre</a></li>
+          <li class="menuLinha"><a href="#contatos">Contatos</a></li>
+        </ul>
+      </nav>
+      
+      <div class="boxBurguer">
+            <img src="Image/cardapio.png" alt="menu" class="burguer" onclick="abrirfechar()">
+      </div>
+
+      <div class="inicio__mobile">
+               <ul class="burguer__Link">
+                <li class="menuLinha2"><a href="index.html">Inicio</a></li>
+                <li class="menuLinha2"><a href="sobre.html">Sobre</a></li>
+                <li class="menuLinha2"><a href="#contatos">Contatos</a></li>  
+            </ul>
+      </div>
+
+    <section id="habilidade">
+        <div class="habilidades">
+            <h1 class="titleHabilidade">Habilidades</h1>
+            <p class="txtHabilidade">
+                Essas são as ferramentas de estudo que utilizo no dia-a-dia, que me dão a possibilidade
+                de usar minha criatividade em prática. Mesmo não mencionado abaixo, gosto de frisar que manter uma relação
+                interpessoal com seus companheiros de equipe é vital para o sucesso do time.
+            </p>
+        </div>
+
+        <!-- Carrossel de Desenvolvimento Web -->
+        <h2 class="categoria-titulo">Desenvolvimento Web</h2>
+        <div class="carrossel-container">
+            <div class="carrossel" id="carrossel-dev">
+                <!-- Itens serão inseridos via JavaScript -->
+            </div>
+            
+            <div class="carrossel-nav">
+                <button class="nav-btn prev" onclick="moverCarrossel('dev', -1)"></button>
+                <button class="nav-btn next" onclick="moverCarrossel('dev', 1)"></button>
+            </div>
+            
+            <div class="carrossel-indicadores" id="indicadores-dev"></div>
+        </div>
+
+        <!-- Carrossel de Ferramentas -->
+        <h2 class="categoria-titulo">Ferramentas de Desenvolvimento</h2>
+        <div class="carrossel-container">
+            <div class="carrossel" id="carrossel-ferramentas">
+                <!-- Itens serão inseridos via JavaScript -->
+            </div>
+            
+            <div class="carrossel-nav">
+                <button class="nav-btn prev" onclick="moverCarrossel('ferramentas', -1)"></button>
+                <button class="nav-btn next" onclick="moverCarrossel('ferramentas', 1)"></button>
+            </div>
+            
+            <div class="carrossel-indicadores" id="indicadores-ferramentas"></div>
+        </div>
+    </section>
+</body>
+
+<section id="contatos">
+    <footer class="rodape">
+        <h1 class="titleRodape"> Alguma dúvida?</h1>
+        <p class="txtRodape"> Obrigado pela sua atenção, aqui vai alguns dos meus contatos:</p>
+        <p class="txtRodape"> Email: nicolasalmeida1@yahoo.com</p>
+        <p class="txtRodape"> WhatsApp: (11) 94137-7733</p>
+        <div class="boxRodapeImg">
+            <a href="https://www.linkedin.com/in/nicolas-almeida-376284244/"> <img class="redeImg" src="Image/linkedin2.png" alt="ERRO"> </a>
+            <a href="https://github.com/NicolasStudio"> <img class="redeImg" src="Image/github2.png" alt="ERRO"> </a>
+            <a href="https://www.instagram.com/nicolas29sousa/"> <img class="redeImg" src="Image/instagram2.png" alt="ERRO"> </a>
+            <a href="https://www.facebook.com/nicolas.almeida.1042/"> <img class="redeImg" src="Image/facebook2.png" alt="ERRO"> </a>
+            <a href="https://api.whatsapp.com/send?phone=11941377733"> <img class="redeImg" src="Image/whatsapp.png" alt="ERRO"> </a>
+        </div>
+        <p class="txtRodape">  ©Nicolas de Almeida Sousa. Todos os direitos Reservados.</p>   
+    </footer>
+</section>
+</html>

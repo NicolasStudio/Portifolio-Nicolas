@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Tektur&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Tektur&display=swap'); */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Tektur', cursive;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: none;
 }
 

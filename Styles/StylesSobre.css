@@ -1,122 +1,233 @@
 :root {
-  --cor-fundo: #333;
-  --cor-texto: #ffffff;
-  --cor-texto-secundario: #cccccc;
-  --cor-destaque: #ff6600;
+    --cor-fundo: #333;
+    --cor-fundo2: #f8f9fa;
+    --cor-texto: #ddd;
+    --cor-texto2: #2d3436;
+    --cor-destaque: #ff6b6b;
+    --cor-secundaria: #4ecdc4;
+    --cor-acento: #45b7d1;
+    --sombra: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transicao: all 0.3s ease;
+}
+
+/* Animações */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Seção Sobre */
+#sobre {
+    padding: 60px 5%;
+    background-color: #d4d4d4;
 }
 
 .boxSobre {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 32px;
-  padding: 5% 3%;
-  background-color: var(--cor-fundo);
-}
-
-.redeSobre {
-  width: 40%;
-  font-size: clamp(18px, 4vw, 20px);
-  font-weight: 600;
-  color: var(--cor-texto);
-}
-
-.redeSobre2 {
-  padding: 2%;
-  color: var(--cor-destaque);
-}
-
-.textRede2 {
-  text-align: center;
-  margin-bottom: 10px;
-  color: var(--cor-texto);
-}
-
-.boxImg {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 6%;
-  background-color: transparent;
-}
-
-.redeImg {
-  width: 48px;
-  height: 48px;
-  transition: 300ms;
-  background-color: transparent;
-}
-
-.redeImg:hover {
-  opacity: 0.65;
-}
-
-.boxImg a {
-  text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .titleSobre {
-  width: 50%;
-  font-size: clamp(18px, 4vw, 20px);
-  font-weight: 600;
-  color: var(--cor-texto);
+    flex: 1;
+    min-width: 300px;
+    animation: fadeInUp 0.8s ease-out;
 }
 
 .titleSobre2 {
-  padding: 2%;
-  text-align: center;
-  color: var(--cor-destaque);
+    font-size: 30px;
+    color: var(--cor-destaque);
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+    color: var(--cor-texto2);
+    padding-bottom: 5px;
+}
+
+.titleSobre2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    color: var(--cor-texto2);
+    transform: translateX(-50%);
+    width: 110px;
+    height: 4px;
+    background: var(--cor-destaque);
+    border-radius: 2px;
+}
+
+.saudacao {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--cor-texto2);
+    margin-bottom: 20px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    border-left: 4px solid var(--cor-destaque);
 }
 
 .textsobre {
-  text-align: justify;
-  text-indent: 2em;
-  font-size: clamp(18px, 4vw, 20px);
-  font-weight: 600;
-  color: var(--cor-texto);
-  margin-bottom: 16px;
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+    transition: var(--transicao);
 }
 
-/* Breakpoint para tablets (768px até 1199px) */
-@media (max-width: 1199px) {
-  .boxSobre {
-    flex-direction: column;
-    align-items: center;
-    padding: 8% 5%;
-  }
-
-  .redeSobre, .titleSobre {
-    width: 90%;
-  }
-
-  .redeImg {
-    width: 44px;
-    height: 44px;
-  }
+.textsobre:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Breakpoint para celulares (até 767px) */
-@media (max-width: 767px) {
-  .boxSobre {
-    padding: 10% 5%;
-  }
+.calculoIdade {
+    font-weight: bold;
+    color: var(--cor-destaque);
+}
 
-  .redeImg {
-    width: 36px;
-    height: 36px;
-  }
+/* Seção Estudos */
+.boxEstudo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 50px;
+    padding-top: 40px;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
 
-  .textsobre {
-    font-size: clamp(16px, 4vw, 18px);
-  }
+.boxFormacao, .boxComplementares {
+    flex: 1;
+    min-width: 300px;
+    background: var(--cor-fundo);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: var(--sombra);
+    transition: var(--transicao);
+}
 
-  .titleSobre2, .redeSobre2 {
+.boxFormacao:hover, .boxComplementares:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.titleFormacao, .titleComplementares {
+    font-size: 1.8rem;
+    color: var(--cor-destaque);
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
     font-size: 22px;
-  }
+}
 
-  .boxImg {
-    gap: 16px;
-    margin-top: 5%;
-  }
+.titleFormacao::after, .titleComplementares::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 3px;
+    background: var(--cor-fundo2);
+}
+
+.linhaFormacao {
+    font-size: 16px;
+    color: var(--cor-texto);
+    margin-bottom: 12px;
+    padding: 8px;
+    border-left: 3px solid transparent;
+    transition: var(--transicao);
+}
+
+.linhaFormacao:hover {
+    border-left-color: var(--cor-destaque);
+    background: rgba(255, 107, 107, 0.1);
+    padding-left: 15px;
+}
+
+.linkPdf {
+    color: var(--cor-ddd);
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    transition: var(--transicao);
+}
+
+.linkPdf::after {
+    content: ' ↗';
+    font-size: 1.2em;
+}
+
+.linkPdf:hover {
+    color: var(--cor-destaque);
+}
+
+/* Progresso dos cursos */
+.progresso {
+    display: inline-block;
+    width: 100px;
+    height: 6px;
+    background: #e9ecef;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.progresso-interno {
+    height: 100%;
+    background: linear-gradient(90deg, var(--cor-secundaria), var(--cor-acento));
+    width: 0;
+    transition: width 1.5s ease-in-out;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .boxSobre {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .titleSobre {
+        width: 100%;
+    }
+
+    .boxEstudo {
+        flex-direction: column;
+    }
+
+    .titleSobre2 {
+        font-size: 30px;
+    }
+
+    .textsobre {
+        font-size: 16px;
+        padding: 12px;
+    }
 }

@@ -12,8 +12,6 @@
     <link rel="stylesheet" href="Styles/Styles.css">
     <link rel="stylesheet" href="Styles/StyleMenu.css"> <!-- Menu superior -->
     <link rel="stylesheet" href="Styles/StylesHome.css"> <!-- Inicio -->
-    <link rel="stylesheet" href="Styles/StylesSobre.css"> <!-- Sobre -->
-    <link rel="stylesheet" href="Styles/StylesHabilidades.css"> <!-- Habilidades -->
     <link rel="stylesheet" href="Styles/StylesProjetos.css"> <!-- Projetos -->
     <link rel="stylesheet" href="Styles/StylesRodape.css"> <!-- Rodape -->
     <script defer src="Js/Script.js"></script>
@@ -25,8 +23,8 @@
         <div class="nomeMenu"><a href="#">Nicolas A.</a></div>
         <ul class="inicio">
           <li class="menuLinha"><a href="#home">Início</a></li>
-          <li class="menuLinha"><a href="#sobre">Sobre</a></li>
-          <li class="menuLinha"><a href="#habilidade">Habilidades</a></li>
+          <li class="menuLinha"><a href="sobre.html">Sobre</a></li>
+          <li class="menuLinha"><a href="habilidades.html">Habilidades</a></li>
           <li class="menuLinha"><a href="#projetos">Projetos</a></li>
           <li class="menuLinha"><a href="#contatos">Contatos</a></li>
         </ul>
@@ -39,8 +37,8 @@
       <div class="inicio__mobile">
                <ul class="burguer__Link">
                 <li class="menuLinha2"><a href="#home">Inicio</a></li>
-                <li class="menuLinha2"><a href="#sobre">Sobre</a></li>
-                <li class="menuLinha2"><a href="#habilidade">Habilidades</a></li>
+                <li class="menuLinha2"><a href="sobre.html">Sobre</a></li>
+                <li class="menuLinha2"><a href="habilidades.html">Habilidades</a></li>
                 <li class="menuLinha2"><a href="#projetos">Projetos</a></li>
                 <li class="menuLinha2"><a href="#contatos">Contatos</a></li>  
             </ul>
@@ -53,116 +51,21 @@
               Olá visitante! <br>
               Me chamo Nicolas de Almeida Sousa
             </h1>
-            <h1 class="titleSaudacao2">Desenvolvedor Full Stack</h1>
-      
+            <h1 class="titleSaudacao2">Desenvolvedor Front-end</h1>
+            
             <p class="saudacaoExplica">
-                Sou desenvolvedor web, sempre em busca de evolução e novos desafios. Para mim, programar é mais do que escrever código — é vivenciar uma jornada de descobertas.
-                Quando me perguntam como é desenvolver, costumo dizer: "Às vezes, nos vemos presos em um problema que parece não ter solução. Mas basta parar, respirar e olhar 
-                com atenção. E quando finalmente resolvemos, a sensação de conquista é simplesmente indescritível."
+                Sou desenvolvedor front-end apaixonado por criar experiências digitais impactantes. A cada desafio, busco soluções criativas que tornam a 
+                navegação mais fluida e intuitiva. Programar é mais do que código, é transformar ideias em realidade, um detalhe de cada vez.
             </p>
           </div>
       
           <img class="saudacaoImg" src="Image/nicolas.jpeg" alt="Foto de Nicolas">
         </div>
       </section>
-      
-      <section id="sobre">
-        <div class="boxSobre">
-          <div class="titleSobre">
-            <center><h1 class="titleSobre2">Sobre mim:</h1></center>
-            <p class="saudacao" id="saudacao" value="">Boa alguma coisa!</p>
-      
-            <script>
-              const saudacaoMng = window.localStorage.getItem('mensagem');
-              document.getElementById("saudacao").innerHTML = saudacaoMng;
-            </script>
-      
-            <p class="textsobre">
-              Me chamo Nicolas, tenho <span class="calculoIdade" id="idade"> </span> anos e iniciei minha jornada na programação em 2019, por meio do curso técnico em Análise e Desenvolvimento de Sistemas. 
-              Infelizmente, por conta da pandemia, não consegui concluí-lo naquele momento. No entanto, minha paixão pela área só cresceu — e, pouco tempo depois, ingressei na Faculdade das Américas (FAM) para continuar minha formação.
-            </p>
-      
-            <p class="textsobre">
-              Tenho objetivos bem definidos em curto, médio e longo prazo. A curto prazo, estou focado em estudar e praticar continuamente para aprimorar minhas habilidades. 
-              A médio prazo, pretendo concluir minha graduação, iniciar uma pós-graduação e também finalizar o curso técnico. Já a longo prazo, meu sonho é conquistar minha casa própria e me tornar uma referência no mundo da programação.
-            </p>
-          </div>
-          <div class="redeSobre">
-            <center><h1 class="redeSobre2">Redes sociais:</h1></center>
-            <center><p class="textRede2">Conecte-se comigo pelas redes abaixo:</p></center>
-            
-            <div class="boxImg">
-              <center>
-                <a href="https://www.linkedin.com/in/nicolas-almeida-376284244/"> <img class="redeImg" src="Image/linkedin2.png" alt="ERRO"> </a>
-                <a href="https://github.com/NicolasStudio"> <img class="redeImg" src="Image/github2.png" alt="ERRO"> </a>
-                <a href="https://www.instagram.com/nicolas29sousa/"> <img class="redeImg" src="Image/instagram2.png" alt="ERRO"> </a>
-                <a href="https://www.facebook.com/nicolas.almeida.1042/"> <img class="redeImg" src="Image/facebook2.png" alt="ERRO"> </a>
-                <a href="https://api.whatsapp.com/send?phone=11941377733"> <img class="redeImg" src="Image/whatsapp.png" alt="ERRO"> </a>
-              </center>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-    <section id="habilidade">
-        <div class="habilidades">
-            <h1 class="titleHabilidade"> Habilidades: </h1>
-                <p class="txtHabilidade"> Essas são as ferramentas de estudo que utilizo no dia-a-dia, que me dão a possibilidade
-                        de usar minha criatividade em prática. Mesmo não mencinado a baixo, gosto de frizar que manter uma relação
-                        interpessoal com seus companheiros de equipe é vital para o sucesso do time. </p>
-        </div>
-
-        <div class="boxConhecimentos">
-            <div class="boxDesenv">
-                <h3 class="textTitle2"> Desenvolvimento web</h3>
-                <center><img src="Image/imgDesenv.png" alt="Erro" class="imgDesenv"></center>
-
-                <div class="boxTodosItens">
-                    <p class="todas ling1">Html</p>
-                    <p class="todas ling2">Css</p>
-                    <p class="todas ling3">JavaScript</p>
-                    <p class="todas ling4">PHP</p>
-                    <p class="todas ling5">Mysql</p>
-                    <p class="todas ling6">JAVA</p>
-                </div>
-            </div>
-
-            <div class="boxFerram">
-                <h3 class="textTitle2"> Ferramentas de desenvolvimento</h3>
-                <center><img src="Image/imgFerram.png" alt="Erro" class="imgDesenv"></center>
-                <div class="boxTodosItens">
-                    <p class="todas ferram1">Visual Studio</p>
-                    <p class="todas ferram2">Sublime</p>
-                    <p class="todas ferram3">Workbench</p>
-                    <p class="todas ferram4">Netbeans</p>
-                    <p class="todas ferram5">Construct 2</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="boxEstudo">
-            <div class="boxFormacao">
-                <center><h1 class="titleFormacao"> Formação Acadêmica:</h1></center>
-                <p class="linhaFormacao"> Ensino médio: (completo).</p>
-                <p class="linhaFormacao"> Curso superior de técnologia em Análise e Desenvolvimento de Sistemas (<a class="linkPdf" href="Image/Certificados/Certificado de Conclusão Graduação - Individual - Chave - PL_Assinado.pdf" target="blank">completo</a>).</p>
-            </div>
-
-            <div class="boxComplementares">
-                <center><h1 class="titleComplementares"> Complementar:</h1></center>
-                <p class="linhaFormacao"> Curso de Html e Css básico: (<a class="linkPdf" href="Image/Certificados/Html básico - (Fundação Bradesco).pdf" target="blank">completo</a>).</p>  
-                <p class="linhaFormacao"> Curso de Html avançado: (<a class="linkPdf" href="Image/Certificados/Html Avançado - (Fundação Bradesco).pdf" target="blank">completo</a>).</p>  
-                <p class="linhaFormacao"> Curso de JavaScript intermediário: (<a class="linkPdf" href="Image/Certificados/Introdução ao JavaScript (Intermediário) - Fundação Bradesco.pdf" target="blank">completo</a>).</p>    
-                <p class="linhaFormacao"> Curso de JAVA básico: (<a class="linkPdf" href="Image/Certificados/Java Basico (40 Horas Certificado Curso em Video).pdf" target="blank">completo</a>).</p>
-                <p class="linhaFormacao"> Curso de Banco de Dados - MySQL: (<a class="linkPdf" href="Image/Certificados/Banco de Dados - MySQL 40 Horas Certificado Curso em Video.pdf" target="blank">completo</a>).</p>
-                <p class="linhaFormacao"> Formação Front-end - HTML, CSS, JavaScript, React e TypeScript com foco em React: (cursando).</p>  
-                <p class="linhaFormacao"> Formação PHP do Zero a Maestria (cursando).</p>  
-            </div>
-        </div>
-    </section>
 
     <section id="projetos">
         <div class="projeto"><br>
-            <h1 class="titleProjeto"> Projetos em destaque: </h1>
+            <h1 class="titleProjetoPrincipal"> Projetos em destaque: </h1>
                 <p class="txtProjeto"> Aqui se encontra projetos que realizei, alguns são jogos para praticar algum
                         conhecimento ou metodologia nova para mim. Outro projeto que foi criado como solução a um problema que eu e os meus amigos 
                         tinhamos, quanto a armazenar informações de uma ficha. E para finalizar projeto que foi elaborado junto a cliente, 
@@ -280,13 +183,6 @@
             <a href="https://api.whatsapp.com/send?phone=11941377733"> <img class="redeImg" src="Image/whatsapp.png" alt="ERRO"> </a>
         </div>
         <p class="txtRodape">  ©Nicolas de Almeida Sousa. Todos os direitos Reservados.</p>   
-          
-        <center>
-        <a href="https://www.flaticon.com/br/icones-gratis/linkedin" title="linkedin ícones">Linkedin ícones criados por IconsBox - Flaticon</a> //
-        <a href="https://www.flaticon.com/br/icones-gratis/facebook" title="facebook ícones">Facebook ícones criados por justicon - Flaticon</a> //
-        <a href="https://www.flaticon.com/br/icones-gratis/logotipo-do-instagram" title="logotipo do instagram ícones">Logotipo do instagram ícones criados por justicon - Flaticon</a> //
-        <a href="https://www.flaticon.com/br/icones-gratis/github" title="github ícones">Github ícones criados por Freepik - Flaticon</a>
-        </center>
     </footer>
 </section>
 </html>

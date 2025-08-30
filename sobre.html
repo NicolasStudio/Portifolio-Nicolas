@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nicolas de Almeida Sousa">
+    <meta name="description" content="Portifólio do desenvolvedor full stack, Nicolas de Almeida Sousa">
+    <meta name="keywords" content="portifolio, html, css, javascript, full stack, desenvolvedor">
+    <link rel="icon" type="image/png" sizes="16x16"  href="Image/IconPage.png">
+    <title>Nicolas A. Portifolio - Sobre</title>
+
+    <link rel="stylesheet" href="Styles/Styles.css">
+    <link rel="stylesheet" href="Styles/StyleMenu.css"> <!-- Menu superior -->
+    <link rel="stylesheet" href="Styles/StylesHome.css"> <!-- Inicio -->
+    <link rel="stylesheet" href="Styles/StylesSobre.css"> <!-- Sobre -->
+    <link rel="stylesheet" href="Styles/StylesRodape.css"> <!-- Rodape -->
+    <script defer src="Js/Script.js"></script>
+
+</head>
+<body>  
+    
+    <nav class="navBar">
+        <div class="nomeMenu"><a href="index.html">Nicolas A.</a></div>
+        <ul class="inicio">
+          <li class="menuLinha"><a href="index.html">Início</a></li>
+          <li class="menuLinha"><a href="habilidades.html">Habilidades</a></li>
+          <li class="menuLinha"><a href="#contatos">Contatos</a></li>
+        </ul>
+    </nav>
+      
+      <div class="boxBurguer">
+            <img src="Image/cardapio.png" alt="menu" class="burguer" onclick="abrirfechar()">
+      </div>
+
+      <div class="inicio__mobile">
+               <ul class="burguer__Link">
+                <li class="menuLinha2"><a href="index.html">Inicio</a></li>
+                <li class="menuLinha2"><a href="habilidades.html">Habilidades</a></li>
+                <li class="menuLinha2"><a href="#contatos">Contatos</a></li>  
+            </ul>
+      </div>
+      
+    <section id="sobre">
+        <div class="boxSobre">
+            <div class="titleSobre">
+                <h1 class="titleSobre2">Sobre mim</h1>
+                
+                <div class="saudacao" id="saudacao">
+                    <span id="saudacaoTexto"></span>
+                </div>
+
+                <p class="textsobre">
+                    Sou Nicolas, tenho <span class="calculoIdade" id="idade"></span> anos, formado em Análise e Desenvolvimento de Sistemas (ADS) pela Faculdade das Américas (FAM). 
+                    Minha jornada na programação começou em 2019, quando iniciei o curso técnico em ADS, mas, devido à pandemia, não consegui finalizá-lo naquele momento. Contudo, 
+                    minha paixão pela tecnologia só aumentou, o que me motivou a concluir a graduação e me aprofundar na área.
+                </p>
+
+                <p class="textsobre">
+                    Atualmente, atuo como Tester/QA (Quality Assurance), o que me permite aplicar boas práticas de programação e garantir a qualidade em cada etapa do desenvolvimento de software. 
+                    Estou sempre em busca de aprimorar minhas habilidades técnicas e de gestão de qualidade, com foco em entregar soluções robustas e eficientes.
+                </p>
+                <p class="textsobre">
+                  Tenho objetivos bem definidos para meu crescimento profissional. A curto prazo, busco continuar me aprofundando em testes e qualidade, além de me manter atualizado com novas 
+                  ferramentas e metodologias. No médio prazo, desejo consolidar minha carreira, adquirir mais experiência em automação de testes e trabalhar em projetos de maior escala. 
+                  A longo prazo, meu objetivo é me tornar uma referência na área de qualidade de software e contribuir para o desenvolvimento de soluções inovadoras.
+                </p>
+            </div>
+        </div>
+
+        <div class="boxEstudo">
+            <div class="boxFormacao">
+                <h1 class="titleFormacao">Formação Acadêmica</h1>
+                <p class="linhaFormacao">Ensino médio: (completo)</p>
+                <p class="linhaFormacao">
+                    Curso superior de tecnologia em Análise e Desenvolvimento de Sistemas 
+                    (<a class="linkPdf" href="Image/Certificados/Certificado de Conclusão Graduação - Individual - Chave - PL_Assinado.pdf" target="_blank">completo</a>)
+                </p>
+            </div>
+
+            <div class="boxComplementares">
+                <h1 class="titleComplementares">Cursos Complementares</h1>
+                <p class="linhaFormacao">Curso de HTML e CSS básico: (<a class="linkPdf" href="Image/Certificados/Html básico - (Fundação Bradesco).pdf" target="_blank">completo</a>)</p>  
+                <p class="linhaFormacao">Curso de HTML avançado: (<a class="linkPdf" href="Image/Certificados/Html Avançado - (Fundação Bradesco).pdf" target="_blank">completo</a>)</p>  
+                <p class="linhaFormacao">Curso de JavaScript intermediário: (<a class="linkPdf" href="Image/Certificados/Introdução ao JavaScript (Intermediário) - Fundação Bradesco.pdf" target="_blank">completo</a>)</p>    
+                <p class="linhaFormacao">Curso de JAVA básico: (<a class="linkPdf" href="Image/Certificados/Java Basico (40 Horas Certificado Curso em Video).pdf" target="_blank">completo</a>)</p>
+                <p class="linhaFormacao">Curso de Banco de Dados - MySQL: (<a class="linkPdf" href="Image/Certificados/Banco de Dados - MySQL 40 Horas Certificado Curso em Video.pdf" target="_blank">completo</a>)</p>
+                <p class="linhaFormacao">Formação Front-end - HTML, CSS, JavaScript, React e TypeScript com foco em React: (cursando <span class="progresso"><span class="progresso-interno" data-progress="70"></span></span>)</p>  
+                <p class="linhaFormacao">Formação PHP do Zero a Maestria: (cursando <span class="progresso"><span class="progresso-interno" data-progress="40"></span></span>)</p>  
+            </div>
+        </div>
+    </section>
+</body>
+
+<section id="contatos">
+    <footer class="rodape">
+        <h1 class="titleRodape"> Alguma dúvida?</h1>
+        <p class="txtRodape"> Obrigado pela sua atenção, aqui vai alguns dos meus contatos:</p>
+        <p class="txtRodape"> Email: nicolasalmeida1@yahoo.com</p>
+        <p class="txtRodape"> WhatsApp: (11) 94137-7733</p>
+        <div class="boxRodapeImg">
+            <a href="https://www.linkedin.com/in/nicolas-almeida-376284244/"> <img class="redeImg" src="Image/linkedin2.png" alt="ERRO"> </a>
+            <a href="https://github.com/NicolasStudio"> <img class="redeImg" src="Image/github2.png" alt="ERRO"> </a>
+            <a href="https://www.instagram.com/nicolas29sousa/"> <img class="redeImg" src="Image/instagram2.png" alt="ERRO"> </a>
+            <a href="https://www.facebook.com/nicolas.almeida.1042/"> <img class="redeImg" src="Image/facebook2.png" alt="ERRO"> </a>
+            <a href="https://api.whatsapp.com/send?phone=11941377733"> <img class="redeImg" src="Image/whatsapp.png" alt="ERRO"> </a>
+        </div>
+        <p class="txtRodape">  ©Nicolas de Almeida Sousa. Todos os direitos Reservados.</p>   
+    </footer>
+</section>
+</html>
