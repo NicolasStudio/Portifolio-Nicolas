@@ -3,49 +3,78 @@
     --cor-texto: #ddd;
     --cor-texto-secundario: #cccccc;
     --cor-destaque: #ff6600;
-  }
-  
-  /* Contatos */
-  footer {
-    background-color: #555;
-    color: var(--cor-texto);
-    padding: 1% 2%;
-  }
-  
+}
+
+/* Contatos */
+footer {
+  background-color: #555;
+  color: var(--cor-texto);
+  padding: 1% 2%;
+}
+
+.titleRodape {
+  padding: 2%;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--cor-destaque);
+}
+
+.txtRodape {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--cor-texto-secundario);
+  padding-bottom: 1%;
+}
+
+.boxRodapeImg {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  margin: 1% auto 2%;
+  text-decoration: none;
+}
+
+.boxRodapeImg a {
+  text-decoration: none;
+}
+
+.boxRodapeImg .redeImg {
+  width: 48px;
+  height: 48px;
+  transition: 300ms;
+}
+
+.boxRodapeImg .redeImg:hover {
+  opacity: 0.65;
+  scale: 1.2;
+}
+
+footer center {
+  padding-top: 20px;
+  display: flex;
+  gap: 6px;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Responsivo para tablets e celulares */
+@media (max-width: 768px) {
   .titleRodape {
-    padding: 2%;
-    font-size: 30px;
-    font-weight: 600;
-    text-align: center;
-    color: var(--cor-destaque);
+    font-size: 20px;
   }
-  
+
   .txtRodape {
-    text-align: center;
-    font-size: 16px;
-    font-weight: 400;
-    color: var(--cor-texto-secundario);
-    padding-bottom: 1%;
+    font-size: 12px;
   }
-  
-  .boxRodapeImg {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    width: 100%;
-    margin: 1% auto 2%;
-    text-decoration: none;
-  }
-  
-  .boxRodapeImg a {
-    text-decoration: none;
-  }
-  
+
   .boxRodapeImg .redeImg {
-    width: 48px;
-    height: 48px;
+    width: 32px;
+    height: 32px;
     transition: 300ms;
   }
   
@@ -53,11 +82,5 @@
     opacity: 0.65;
     scale: 1.2;
   }
-  
-  footer center {
-    padding-top: 20px;
-    display: flex;
-    gap: 6px;
-    text-align: center;
-    justify-content: center;
-  }
+
+}

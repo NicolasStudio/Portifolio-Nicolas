@@ -1,13 +1,13 @@
 :root {
-    --cor-fundo: #333;
-    --cor-fundo2: #f8f9fa;
-    --cor-texto: #ddd;
-    --cor-texto2: #2d3436;
-    --cor-destaque: #ff6b6b;
-    --cor-secundaria: #4ecdc4;
-    --cor-acento: #45b7d1;
-    --sombra: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --transicao: all 0.3s ease;
+--cor-fundo: #333;
+--cor-fundo2: #f8f9fa;
+--cor-texto: #ddd;
+--cor-texto2: #2d3436;
+--cor-destaque: #ff6b6b;
+--cor-secundaria: #4ecdc4;
+--cor-acento: #45b7d1;
+--sombra: 0 4px 6px rgba(0, 0, 0, 0.1);
+--transicao: all 0.3s ease;
 }
 
 /* Animações */
@@ -223,7 +223,7 @@
     }
 
     .titleSobre2 {
-        font-size: 30px;
+        font-size: 22px;
     }
 
     .textsobre {
