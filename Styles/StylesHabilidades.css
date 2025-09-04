@@ -139,6 +139,7 @@
 .nav-btn::after {
     content: '';
     font-weight: bold;
+    
 }
 
 .nav-btn.prev::after {

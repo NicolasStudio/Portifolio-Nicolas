@@ -1,6 +1,31 @@
 // ==============================
 // Scroll Suave para Seções Âncoras
 // ==============================
+
+function chamandoProjetos() {
+    // Salva a seção desejada
+    localStorage.setItem('scrollTo', 'projetos');
+    // Redireciona para a página principal
+    window.location.href = "index.html";
+}
+
+// Verifica se existe uma seção a ser rolada
+const scrollToSection = localStorage.getItem('scrollTo');
+if (scrollToSection) {
+    const section = document.getElementById(scrollToSection);
+    if (section) {
+        const headerHeight = document.querySelector("header") ? document.querySelector("header").offsetHeight : 0;
+        const distanceFromTheTop = section.offsetTop - headerHeight;
+        window.scroll({
+            top: distanceFromTheTop,
+            behavior: "smooth",
+        });
+    }
+    // Remove para não repetir no próximo carregamento
+    localStorage.removeItem('scrollTo');
+}
+
+
 document.addEventListener('DOMContentLoaded', () => {
 
     const menulink = document.querySelectorAll('.inicio a[href^="#"]'); // Definido uma vez
