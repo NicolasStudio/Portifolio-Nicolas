@@ -22,14 +22,28 @@
 }
 
 .titleSaudacao2 {
-    display: inline-block;
-    white-space: nowrap;
-    color: #222;
-    border-right: 3px solid #222;
-    animation: typing 2.8s steps(22, end) 1s 1 normal both, blinkCursor 0.8s step-end 8;
-    overflow: hidden;
-    width: 0; /* Começa com largura zero */
-    letter-spacing: 4px; /* Ajuste fino para melhor sincronia */
+  font-size: clamp(18px, 7vw, 28px);
+  color: #222;
+  border-right: 3px solid #222;
+  padding-right: 2px;
+  white-space: normal; /* Permite múltiplas linhas */
+  word-wrap: break-word;
+  display: inline-block;
+}
+
+.titleSaudacao2.blink::after {
+  content: '';
+  display: inline-block;
+  width: 2px;
+  background-color: #222;
+  animation: blinkCursor 0.8s step-end infinite;
+  margin-left: 2px;
+}
+
+@keyframes blinkCursor {
+  50% {
+    background-color: transparent;
+  }
 }
 
 @keyframes typing {
@@ -82,7 +96,6 @@
 @media (max-width: 768px) {
   .saudacaoText {
     flex: 1 1 300px;
-    font-size: clamp(14px, 4vw, 22px);
   }
 
   .saudacaoExplica {

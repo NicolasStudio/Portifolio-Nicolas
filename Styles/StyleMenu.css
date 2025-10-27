@@ -10,7 +10,7 @@
   
   /* Nome à esquerda */
   .nomeMenu a {
-    font-size: 36px;
+    font-size: clap(18px, 2vw, 32px);
     color: #ddd;
     text-decoration: none;
     padding: 14px 30px;

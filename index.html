@@ -14,8 +14,10 @@
     <link rel="stylesheet" href="Styles/StylesHome.css"> <!-- Inicio -->
     <link rel="stylesheet" href="Styles/StylesProjetos.css"> <!-- Projetos -->
     <link rel="stylesheet" href="Styles/StylesRodape.css"> <!-- Rodape -->
-    <script defer src="Js/Script.js"></script>
 
+    <script defer src="Js/fragments.js"></script>
+    <script defer src="Js/ScriptPadrao.js"></script>
+    
 </head>
 <body>  
     
@@ -51,7 +53,25 @@
               Olá visitante! <br>
               Me chamo Nicolas de Almeida Sousa
             </h1>
-            <h1 class="titleSaudacao2">Desenvolvedor Front-end</h1>
+
+            <h1 class="titleSaudacao2" id="saudacao">Desenvolvedor Front-end</h1>
+
+            <script>
+                const el = document.getElementById('saudacao');
+                const text = el.textContent;
+                el.textContent = ''; // Limpa o texto inicialmente
+                let i = 0;
+
+                function type() {
+                if (i < text.length) {
+                    el.textContent += text[i];
+                    i++;
+                    setTimeout(type, 100); // Velocidade da digitação em ms
+                }
+                }
+
+                type();
+            </script>
             
             <p class="saudacaoExplica">
                 Sou desenvolvedor front-end apaixonado por criar experiências digitais impactantes. A cada desafio, busco soluções criativas que tornam a 
