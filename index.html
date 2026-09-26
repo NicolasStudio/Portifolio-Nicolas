@@ -4,18 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Nicolas de Almeida Sousa">
-    <meta name="description" content="Portifólio do desenvolvedor full stack, Nicolas de Almeida Sousa">
-    <meta name="keywords" content="portifolio, html, css, javascript, full stack, desenvolvedor">
+    <meta name="description" content="Portfólio do desenvolvedor full stack, Nicolas de Almeida Sousa">
+    <meta name="keywords" content="portfólio, html, css, javascript, full stack, desenvolvedor">
     <link rel="icon" type="image/png" sizes="16x16"  href="Image/IconPage.png">
-    <title>Nicolas A. Portifolio</title>
+    <title>Nicolas A. Portfólio</title>
 
     <link rel="stylesheet" href="Styles/Styles.css">
     <link rel="stylesheet" href="Styles/StyleMenu.css"> <!-- Menu superior -->
     <link rel="stylesheet" href="Styles/StylesHome.css"> <!-- Inicio -->
     <link rel="stylesheet" href="Styles/StylesProjetos.css"> <!-- Projetos -->
     <link rel="stylesheet" href="Styles/StylesRodape.css"> <!-- Rodape -->
-
-    <script defer src="Js/fragments.js"></script>
     <script defer src="Js/ScriptPadrao.js"></script>
     
 </head>
@@ -33,12 +31,12 @@
       </nav>
       
       <div class="boxBurguer">
-            <img src="Image/cardapio.png" alt="menu" class="burguer" onclick="abrirfechar()">
+            <img src="Image/cardapio.png" alt="Abrir menu" class="burguer" onclick="toggleMenuMobile()">
       </div>
 
       <div class="inicio__mobile">
                <ul class="burguer__Link">
-                <li class="menuLinha2"><a href="#home">Inicio</a></li>
+                <li class="menuLinha2"><a href="#home">Início</a></li>
                 <li class="menuLinha2"><a href="#projetos">Projetos</a></li>
                 <li class="menuLinha2"><a href="habilidades.html">Habilidades</a></li>
                 <li class="menuLinha2"><a href="sobre.html">Sobre</a></li>
@@ -86,10 +84,22 @@
     <section id="projetos">
         <div class="projeto"><br>
             <h1 class="titleProjetoPrincipal"> Projetos em destaque: </h1>
-                <p class="txtProjeto"> Aqui se encontra projetos que realizei, alguns são jogos para praticar algum
-                        conhecimento ou metodologia nova para mim. Outro projeto que foi criado como solução a um problema que eu e os meus amigos 
-                        tinhamos, quanto a armazenar informações de uma ficha. E para finalizar projeto que foi elaborado junto a cliente, 
-                        onde o mesmo precisava de um espaço de divulgação do seu trabalho.</p> <br><br>
+                <p class="txtProjeto"> Aqui estão alguns projetos que realizei. Alguns são jogos para praticar conhecimentos ou metodologias novas para mim;
+                        outro foi criado como solução para um problema que eu e meus amigos tínhamos para armazenar as informações de uma ficha.
+                        Por fim, há um projeto elaborado junto a um cliente, que precisava de um espaço para divulgar seu trabalho.</p> <br><br>
+        </div>
+
+        <div class="boxProjeto1">
+            <div class="boxTexto1">
+                <h3 class="titleProjeto"> Eternal Adventure</h3>
+                <p class="txtProjeto"> Esse jogo foi desenvolvido como forma de praticar programação e criar uma experiência envolvente para os jogadores, 
+                    oferecendo uma aventura épica em um mundo de fantasia. O objetivo principal é se tornar forte com a classe de personagem escolhida, enfrentando desafios 
+                    e inimigos ao longo do caminho. O jogo foi desenvolvido utilizando apenas HTML, CSS e JavaScript, para o banco de dados e controle de lobby foi utilizado o Firebase, 
+                    permitindo que os jogadores salvem seu progresso e compartilhem suas conquistas com outros jogadores.
+                </p>
+                <p class="txtProjeto"> Você pode conferir através do <a href="https://nicolasstudio.github.io/Eternal-Adventure/" class="linkGit"> Github.</a></p>
+            </div>
+            <a href="https://nicolasstudio.github.io/Eternal-Adventure/" target="_blank" rel="noopener" class="projetoLink"><img src="Image/projetos/eternalAdventure.png" alt="Tela do projeto Eternal Adventure" class="imgProjeto"></a>
         </div>
 
         <div class="boxProjeto1">
@@ -101,7 +111,7 @@
                     passou a contar com um contador de caracteres, oferecendo ainda mais praticidade no dia a dia dos testes.</p>
                 <p class="txtProjeto"> Você pode conferir através do <a href="https://nicolasstudio.github.io/GeradorDeDados/" class="linkGit"> Github.</a></p>
             </div>
-            <img src="Image/projetos/geradorSenha.png" alt="Erro" class="imgGer" onclick="redirecionar1()">
+            <a href="https://nicolasstudio.github.io/GeradorDeDados/" target="_blank" rel="noopener" class="projetoLink"><img src="Image/projetos/ferramentas.png" alt="Tela do projeto Gerador de Dados" class="imgProjeto"></a>
         </div>
 
         <div class="boxProjeto2">
@@ -114,7 +124,7 @@
                     encaminha automaticamente as informações para a pizzaria via WhatsApp.</p>
                 <p class="txtProjeto"> Você pode conferir através do <a href="https://nicolasstudio.github.io/Pizzaria/" class="linkGit"> Github.</a></p>
             </div>
-            <img src="Image/projetos/Pizzaria.PNG" alt="Erro" class="imgAdv" onclick="redirecionar2()">
+            <a href="https://nicolasstudio.github.io/Pizzaria/" target="_blank" rel="noopener" class="projetoLink"><img src="Image/projetos/Pizzaria.PNG" alt="Tela do projeto Pizzaria" class="imgProjeto"></a>
         </div>
 
         <div class="boxProjeto1">
@@ -126,39 +136,38 @@
                     pop-ups para facilitar a visualização das etapas de construção, proporcionando uma experiência mais intuitiva para os usuários.</p>
                 <p class="txtProjeto"> Você pode conferir através do <a href="https://nicolasstudio.github.io/Nivaldo-Construcao/" class="linkGit"> Github.</a></p>
             </div>
-            <img src="Image/projetos/portifolio.png" alt="Erro" class="imgObras" onclick="redirecionar3()">
+            <a href="https://nicolasstudio.github.io/Nivaldo-Construcao/" target="_blank" rel="noopener" class="projetoLink"><img src="Image/projetos/portifolio.png" alt="Tela do projeto Landing page" class="imgProjeto"></a>
         </div>
 
         <div class="boxProjeto2">
             <div class="boxTexto2">
                 <h3 class="titleProjeto"> Ficha de RPG </h3>
-                <p class="txtProjeto">  Este projeto é um dos meus favoritos, pois sempre tenho alguma ideia para incrementar em seu codigo. Ele surgiu com uma 
-                        solução a um dos problemas que tinhamos em nossas mesas de RPG, precisavamos de algo que pudesse salvar nossas informações e não ficar dependendo
-                        de papeis ou PDF. Seu desenvolvimento foi bem complexo, pois precisava comunicar com banco de dados através do PHP, foi bastante desafiador. </p>
+                <p class="txtProjeto">  Este projeto é um dos meus favoritos, pois sempre tenho alguma ideia para incrementar em seu código. Ele surgiu como solução para um dos problemas que tínhamos em nossas mesas de RPG, precisávamos de algo que pudesse salvar nossas informações e não ficar dependendo
+                        de papéis ou PDF. Seu desenvolvimento foi bastante desafiador, pois precisava se comunicar com o banco de dados através do PHP. </p>
                 <p class="txtProjeto"> Você pode conferir uma versão anterior no <a href="https://nicolasstudio.github.io/Ficha-de-RPG/" class="linkGit"> Github.</a></p>
                 <p class="txtProjeto"> Ou a versão com PHP e Banco de dados no <a href="https://github.com/NicolasStudio/Ficha-RPG-2" class="linkGit"> Github.</a></p>
             </div>
-            <img src="Image/projetos/ficha.png" alt="Erro" class="imgFicha" onclick="redirecionar4()">
+            <a href="https://nicolasstudio.github.io/Ficha-de-RPG/" target="_blank" rel="noopener" class="projetoLink"><img src="Image/projetos/ficha.png" alt="Tela do projeto Ficha de RPG" class="imgProjeto"></a>
         </div>
 
         <div class="boxProjeto1">
             <div class="boxTexto1">
                 <h3 class="titleProjeto"> Calculadora </h3>
-                <p class="txtProjeto"> Por ultimo e não menos importante, uma calculadora feita em JAVA. Sua criação foi muito boa para utilizar tudo o que aprendi 
-                    no curso de JAVA básico, além de ter uma função onde podemos alterar sua cor. </p>
+                <p class="txtProjeto"> Por último, mas não menos importante, uma calculadora feita em Java. Sua criação foi muito boa para utilizar tudo o que aprendi 
+                    no curso de Java básico, além de ter uma função onde podemos alterar sua cor. </p>
                 <p class="txtProjeto"> Você pode conferir através do <a href="https://github.com/NicolasStudio/Calculadora" class="linkGit"> Github.</a></p>
             </div>
-           <img src="Image/projetos/calc.png" alt="Erro" class="imgCalc" onclick="redirecionar5()">
+           <a href="https://github.com/NicolasStudio/Calculadora" target="_blank" rel="noopener" class="projetoLink"><img src="Image/projetos/calc.png" alt="Tela do projeto Calculadora" class="imgProjeto"></a>
         </div>
 
         <div class="boxProjeto2">
             <div class="boxTexto2">
-                <h3 class="titleProjeto"> Batalha Naval </h3>
+                <h3 class="titleProjeto"> Nick Jogos </h3>
                 <p class="txtProjeto"> Este foi um dos jogos mais desafiadores e intrigantes que desenvolvi, exigindo bastante lógica e atenção aos detalhes ao longo 
-                    do processo. Nele, você pode se divertir jogando o clássico Batalha Naval, totalmente recriado para a web de forma interativa e dinâmica. </p>
-                <p class="txtProjeto"> Você pode conferir através do <a href="https://nicolasstudio.github.io/Batalha-Naval/" class="linkGit"> Github.</a></p>
+                    do processo. Nele possui uma biblioteca de jogos criados por mim, como: Batalha Naval, Jogo da Memória, Pokémon, Jogo da Senha, Tamagotchi e afins.</p>
+                <p class="txtProjeto"> Você pode conferir através do <a href="https://nicolasstudio.github.io/NickJogos/" class="linkGit"> Github.</a></p>
             </div>
-           <img src="Image/projetos/batalha.PNG" alt="Erro" class="imgBatalha" onclick="redirecionar6()">
+           <a href="https://nicolasstudio.github.io/NickJogos/" target="_blank" rel="noopener" class="projetoLink"><img src="Image/projetos/nickJogos.png" alt="Tela do projeto Nick Jogos" class="imgProjeto"></a>
         </div>
 
         <div class="boxProjeto1">
@@ -170,7 +179,7 @@
                     O sistema também já conta com uma forma de pagamento integrada, oferecendo uma experiência completa e funcional. </p>
                 <p class="txtProjeto"> Versão com PHP e Banco de dados no  <a href="https://github.com/NicolasStudio/Livraria?tab=readme-ov-file" class="linkGit"> Github.</a></p>
             </div>
-           <img src="Image/projetos/Livraria.png" alt="Erro" class="imgLivraria" onclick="redirecionar7()">
+           <a href="https://github.com/NicolasStudio/Livraria?tab=readme-ov-file" target="_blank" rel="noopener" class="projetoLink"><img src="Image/projetos/Livraria.png" alt="Tela do projeto Livraria" class="imgProjeto"></a>
         </div>
 
         <div class="boxProjeto2">
@@ -182,27 +191,27 @@
                     da necessidade diária de calorias, indicando quanto o usuário deve consumir para ganhar massa muscular ou reduzir a ingestão calórica para perder peso. </p>
                 <p class="txtProjeto"> Você pode conferir através do <a href="https://nicolasstudio.github.io/Zer0Kcalc/" class="linkGit"> Github.</a></p>
             </div>
-           <img src="Image/projetos/zer0kcal.png" alt="Erro" class="imgBatalha" onclick="redirecionar8()">
+           <a href="https://nicolasstudio.github.io/Zer0Kcalc/" target="_blank" rel="noopener" class="projetoLink"><img src="Image/projetos/zer0kcal.png" alt="Tela do projeto Zer0Kcalc" class="imgProjeto"></a>
         </div>
 
     </section>
 
-</body>
 
 <section id="contatos">
     <footer class="rodape">
         <h1 class="titleRodape"> Alguma dúvida?</h1>
-        <p class="txtRodape"> Obrigado pela sua atenção, aqui vai alguns dos meus contatos:</p>
+        <p class="txtRodape"> Obrigado pela sua atenção, aqui estão alguns dos meus contatos:</p>
         <p class="txtRodape"> Email: nicolasalmeida1@yahoo.com</p>
         <p class="txtRodape"> WhatsApp: (11) 94137-7733</p>
         <div class="boxRodapeImg">
-            <a href="https://www.linkedin.com/in/nicolas-almeida-376284244/"> <img class="redeImg" src="Image/linkedin2.png" alt="ERRO"> </a>
-            <a href="https://github.com/NicolasStudio"> <img class="redeImg" src="Image/github2.png" alt="ERRO"> </a>
-            <a href="https://www.instagram.com/nicolas29sousa/"> <img class="redeImg" src="Image/instagram2.png" alt="ERRO"> </a>
-            <a href="https://www.facebook.com/nicolas.almeida.1042/"> <img class="redeImg" src="Image/facebook2.png" alt="ERRO"> </a>
-            <a href="https://api.whatsapp.com/send?phone=11941377733"> <img class="redeImg" src="Image/whatsapp.png" alt="ERRO"> </a>
+            <a href="https://www.linkedin.com/in/nicolas-almeida-376284244/"> <img class="redeImg" src="Image/linkedin2.png" alt="LinkedIn"> </a>
+            <a href="https://github.com/NicolasStudio"> <img class="redeImg" src="Image/github2.png" alt="GitHub"> </a>
+            <a href="https://www.instagram.com/nicolas29sousa/"> <img class="redeImg" src="Image/instagram2.png" alt="Instagram"> </a>
+            <a href="https://www.facebook.com/nicolas.almeida.1042/"> <img class="redeImg" src="Image/facebook2.png" alt="Facebook"> </a>
+            <a href="https://api.whatsapp.com/send?phone=11941377733"> <img class="redeImg" src="Image/whatsapp.png" alt="WhatsApp"> </a>
         </div>
-        <p class="txtRodape">  ©Nicolas de Almeida Sousa. Todos os direitos Reservados.</p>   
+        <p class="txtRodape">  ©Nicolas de Almeida Sousa. Todos os direitos reservados.</p>   
     </footer>
 </section>
+</body>
 </html>

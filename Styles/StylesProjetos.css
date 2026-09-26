@@ -83,16 +83,21 @@
 }
   
   /* Estilos para as imagens dos projetos */
-.imgGer, .imgAdv, .imgObras, .imgFicha, .imgCalc, .imgBatalha, .imgLivraria{
+.projetoLink {
+  display: block;
   flex: 1 1 300px;
   max-width: 500px;
+}
+
+.imgProjeto {
+  display: block;
   width: 100%;
   border-radius: 10px;
-  cursor: pointer;
   transition: transform 0.3s ease;
 }
 
-.imgGer, .imgAdv, .imgObras, .imgFicha, .imgCalc, .imgBatalha, .imgLivraria:hover {
+.projetoLink:hover .imgProjeto,
+.projetoLink:focus-visible .imgProjeto {
   transform: scale(1.03);
 }
 
@@ -107,7 +112,7 @@
     max-width: 100%;
   }
 
-  [class^="img"] {
+  .projetoLink {
     max-width: 100%;
   }
 
