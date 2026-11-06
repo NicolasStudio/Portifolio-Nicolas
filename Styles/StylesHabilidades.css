@@ -1,296 +1,107 @@
-:root {
-    --cor-primaria: #2d3436;
-    --cor-secundaria: #6c5ce7;
-    --cor-destaque: #ff6600;
-    --cor-fundo: #f8f9fa;
-    --cor-texto: #2d3436;
-    --cor-texto-claro: #636e72;
-    --cor-card: #2d3436;
-    --cor-card-texto: #ffffff;
-    --sombra: 0 4px 15px rgba(0, 0, 0, 0.1);
-    --transicao: all 0.3s ease;
+/* =========================================================
+   Habilidades
+   ========================================================= */
+.skill-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 22px;
+  margin: 8px 0 22px;
 }
 
-/* Seção Habilidades */
-#habilidade {
-    padding: 80px 5%;
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-top: 3%;
+.skill-group i {
+  color: var(--accent);
+  font-size: 18px;
 }
 
-.habilidades {
-    text-align: center;
-    margin-bottom: 60px;
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+  margin-bottom: 64px;
 }
 
-.titleHabilidade {
-    font-size: 30px;
-    color: var(--cor-primaria);
-    margin-bottom: 20px;
-    position: relative;
-    display: inline-block;
+.skill-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.titleHabilidade::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 110px;
-    height: 4px;
-    background: var(--cor-destaque);
-    border-radius: 2px;
+.skill-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(220px circle at var(--mx, 50%) var(--my, 50%), rgba(255, 106, 26, 0.16), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
-.txtHabilidade {
-    font-size: 16px;
-    color: var(--cor-texto-claro);
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.8;
+.skill-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 106, 26, 0.4);
 }
 
-/* Carrossel */
-.carrossel-container {
-    position: relative;
-    margin: 40px 0;
-    overflow: hidden;
+.skill-card:hover::before { opacity: 1; }
+
+.skill-icon {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 24px;
+  transition: transform 0.3s ease;
 }
 
-.carrossel {
-    display: flex;
-    transition: transform 0.5s ease;
-    gap: 20px;
-    margin-left: 20px;
+.skill-card:hover .skill-icon { transform: rotate(-8deg) scale(1.08); }
+
+.skill-card h3 {
+  font-size: 17px;
+  margin-bottom: 2px;
 }
 
-.carrossel-item {
-    flex: 0 0 calc(33.333% - 20px);
-    min-width: 280px;
-    background: var(--cor-card);
-    border-radius: 15px;
-    padding: 25px;
-    text-align: center;
-    box-shadow: var(--sombra);
-    transition: var(--transicao);
-    color: var(--cor-card-texto);
+.skill-card p {
+  color: var(--text-2);
+  font-size: 14px;
+  line-height: 1.45;
 }
 
-.carrossel-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+.soft {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 32px;
+  border-radius: var(--radius);
+  border: 1px dashed rgba(255, 106, 26, 0.45);
+  background: linear-gradient(135deg, rgba(255, 106, 26, 0.08), transparent 60%);
 }
 
-.carrossel-icone {
-    font-size: 3rem;
-    margin-bottom: 15px;
-    display: block;
-    color: var(--cor-card-texto);
+.soft-icon {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  background: var(--gradient);
+  color: #160a02;
+  font-size: 26px;
 }
 
-.carrossel-titulo {
-    font-size: 22px;
-    color: #ddd;
-    margin-bottom: 10px;
-    font-weight: 600;
-}
+.soft h3 { font-size: 22px; margin-bottom: 6px; }
+.soft p { color: var(--text-2); }
 
-.carrossel-descricao {
-    color: #ddd;
-    font-size: 0.95rem;
-}
-
-/* Navegação do Carrossel - CORRIGIDA */
-.carrossel-nav {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 30px;
-}
-
-.nav-btn {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: var(--cor-primaria);
-    color: white;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    transition: var(--transicao);
-    font-weight: bold;
-}
-
-.nav-btn:hover {
-    background: var(--cor-destaque);
-    transform: scale(1.1);
-}
-
-/* REMOVI os ícones do Font Awesome e usei texto simples */
-.nav-btn i {
-    display: none; /* Esconde os ícones */
-}
-
-.nav-btn::after {
-    content: '';
-    font-weight: bold;
-    
-}
-
-.nav-btn.prev::after {
-    content: '<'; /* Sinal de menor para voltar */
-}
-
-.nav-btn.next::after {
-    content: '>'; /* Sinal de maior para avançar */
-}
-
-.carrossel-indicadores {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-.indicador {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #ddd;
-    cursor: pointer;
-    transition: var(--transicao);
-}
-
-.indicador.ativo {
-    background: var(--cor-primaria);
-    transform: scale(1.2);
-}
-
-/* Categorias */
-.categoria-titulo {
-    text-align: center;
-    font-size: 22px;
-    color: var(--cor-primaria);
-    margin: 60px 0 30px;
-    position: relative;
-}
-
-.categoria-titulo::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 110px;
-    height: 3px;
-    background: var(--cor-destaque);
-}
-
-/* Cores específicas para categorias - AJUSTADAS */
-.dev-web { 
-    background: #2d3436; 
-    border-left: 4px solid #ff6600;
-}
-
-.ferramentas { 
-    background: #2d3436;
-    border-left: 4px solid #ff6600;
-}
-
-.banco-dados { 
-    background: #2d3436;
-    border-left: 4px solid #ff6600;
-}
-
-.linguagens { 
-    background: #2d3436;
-    border-left: 4px solid #ff6600;
-}
-
-/* Animações */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.carrossel-item {
-    animation: fadeIn 0.6s ease-out;
-}
-
-/* Responsividade */
-@media (max-width: 1024px) {
-    .carrossel-item {
-        flex: 0 0 calc(50% - 20px);
-    }
-}
-
-@media (max-width: 768px) {
-    .titleHabilidade {
-        font-size: 22px;
-    }
-    
-    .carrossel-container {
-        margin: 20px -5%; /* Compensa o padding da seção */
-        width: calc(100% + 10%); /* Expande o container */
-    }
-    
-    .carrossel {
-        gap: 15px; /* Reduz o gap para mobile */
-        padding: 0 10px; /* Adiciona padding interno */
-    }
-    
-    .carrossel-item {
-        flex: 0 0 calc(100% - 20px); /* Largura total com margem */
-        min-width: calc(100% - 20px); /* Garante que não corte */
-        margin: 0 10px; /* Margem lateral */
-        box-sizing: border-box; /* Garante que padding não afete a largura */
-    }
-    
-    .carrossel-nav {
-        margin-top: 25px;
-        position: relative;
-        z-index: 10; /* Garante que fique acima do conteúdo */
-    }
-    
-    .nav-btn {
-        width: 45px;
-        height: 45px;
-        font-size: 1.1rem;
-        background: var(--cor-primaria);
-    }
-
-    /* Ajustes adicionais para mobile */
-    .categoria-titulo {
-        font-size: 18px;
-        margin: 40px 0 20px;
-    }
-    
-    .txtHabilidade {
-        font-size: 14px;
-        padding: 0 10px;
-    }
-    
-    .carrossel-icone {
-        font-size: 2.5rem;
-    }
-    
-    .carrossel-titulo {
-        font-size: 1.2rem;
-    }
-    
-    .carrossel-descricao {
-        font-size: 0.9rem;
-    }
+@media (max-width: 600px) {
+  .soft { flex-direction: column; text-align: center; padding: 28px 20px; }
 }

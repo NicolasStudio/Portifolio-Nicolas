@@ -4,112 +4,180 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Nicolas de Almeida Sousa">
-    <meta name="description" content="Portfólio do desenvolvedor full stack, Nicolas de Almeida Sousa">
-    <meta name="keywords" content="portfólio, html, css, javascript, full stack, desenvolvedor">
-    <link rel="icon" type="image/png" sizes="16x16"  href="Image/IconPage.png">
-    <title>Nicolas A. Portfólio - Sobre</title>
+    <meta name="description" content="Sobre Nicolas de Almeida Sousa — formado em Análise e Desenvolvimento de Sistemas, atuando como Tester/QA e desenvolvedor front-end.">
+    <meta name="theme-color" content="#0c0c0f">
+    <link rel="icon" type="image/png" href="Image/IconPage.png">
+    <title>Sobre — Nicolas Almeida</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="Styles/Styles.css">
-    <link rel="stylesheet" href="Styles/StyleMenu.css"> <!-- Menu superior -->
-    <link rel="stylesheet" href="Styles/StylesHome.css"> <!-- Inicio -->
-    <link rel="stylesheet" href="Styles/StylesSobre.css"> <!-- Sobre -->
-    <link rel="stylesheet" href="Styles/StylesRodape.css"> <!-- Rodape -->
-    
+    <link rel="stylesheet" href="Styles/StylesSobre.css">
     <script defer src="Js/ScriptSobre.js"></script>
     <script defer src="Js/ScriptPadrao.js"></script>
-
 </head>
-<body>  
-    
-    <nav class="navBar">
-        <div class="nomeMenu"><a href="index.html">Nicolas A.</a></div>
-        <ul class="inicio">
-            <li class="menuLinha"><a href="index.html">Início</a></li>
-            <li class="menuLinha"><a href="index.html#projetos">Projetos</a></li>
-            <li class="menuLinha"><a href="habilidades.html">Habilidades</a></li>
-            <li class="menuLinha"><a href="#contatos">Contatos</a></li>  
-        </ul>
-    </nav>
-      
-      <div class="boxBurguer">
-            <img src="Image/cardapio.png" alt="Abrir menu" class="burguer" onclick="toggleMenuMobile()">
-      </div>
+<body>
 
-      <div class="inicio__mobile">
-            <ul class="burguer__Link">
-                <li class="menuLinha2"><a href="index.html">Início</a></li>
-                <li class="menuLinha2"><a href="index.html#projetos">Projetos</a></li>
-                <li class="menuLinha2"><a href="habilidades.html">Habilidades</a></li>
-                <li class="menuLinha2"><a href="#contatos">Contatos</a></li>  
+    <header class="navBar">
+        <nav class="nav-inner" aria-label="Navegação principal">
+            <a href="index.html" class="logo"><span class="logo-mark">N</span><span>Nicolas<span class="dot">.</span></span></a>
+            <button class="burguer" aria-label="Abrir menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html#projetos">Projetos</a></li>
+                <li><a href="habilidades.html">Habilidades</a></li>
+                <li><a href="sobre.html" class="active" aria-current="page">Sobre</a></li>
+                <li><a href="#contatos" class="nav-cta">Contato</a></li>
             </ul>
-      </div>
-      
-    <section id="sobre">
-        <div class="boxSobre">
-            <div class="titleSobre">
-                <h1 class="titleSobre2">Sobre mim</h1>
-                
-                <div class="saudacao" id="saudacao">
-                    <span id="saudacaoTexto"></span>
+        </nav>
+    </header>
+
+    <main class="page">
+        <!-- ================= SOBRE ================= -->
+        <section class="container about">
+            <div class="about-text">
+                <span class="eyebrow reveal">Sobre mim</span>
+                <h1 class="section-title reveal" style="--delay:.05s"><span id="saudacaoTexto">Olá!</span></h1>
+
+                <p class="lead reveal" style="--delay:.1s">
+                    Sou Nicolas, tenho <strong class="text-gradient" id="idade"></strong> anos e sou formado em
+                    <strong>Análise e Desenvolvimento de Sistemas</strong> pela Faculdade das Américas (FAM).
+                </p>
+
+                <p class="reveal" style="--delay:.15s">
+                    Minha jornada na programação começou em 2019, no curso técnico em ADS. A pandemia interrompeu
+                    esse caminho, mas a paixão pela tecnologia só cresceu — e foi ela que me levou a concluir a
+                    graduação e me aprofundar na área.
+                </p>
+
+                <p class="reveal" style="--delay:.2s">
+                    Hoje atuo como <strong>Tester/QA</strong>, aplicando boas práticas e garantindo qualidade em cada
+                    etapa do desenvolvimento. Em paralelo, sigo criando projetos front-end e jogos web para continuar
+                    evoluindo como desenvolvedor.
+                </p>
+            </div>
+
+            <aside class="profile-card reveal" style="--delay:.15s">
+                <img src="Image/nicolas.png" alt="Foto de Nicolas de Almeida Sousa" class="profile-img">
+                <h2>Nicolas de Almeida Sousa</h2>
+                <p class="profile-role">Tester/QA · Desenvolvedor Front-end</p>
+                <ul class="profile-info">
+                    <li><i class="fa-solid fa-graduation-cap"></i> ADS — FAM</li>
+                    <li><i class="fa-solid fa-code"></i> Programando desde 2019</li>
+                    <li><i class="fa-solid fa-bug"></i> Foco em qualidade de software</li>
+                </ul>
+                <a href="#contatos" class="btn btn-primary btn-sm"><i class="fa-regular fa-paper-plane"></i> Entrar em contato</a>
+            </aside>
+        </section>
+
+        <!-- ================= OBJETIVOS ================= -->
+        <section class="container section-tight">
+            <div class="section-head reveal">
+                <span class="eyebrow">Onde quero chegar</span>
+                <h2 class="section-title">Objetivos</h2>
+            </div>
+            <div class="goals">
+                <div class="goal reveal">
+                    <span class="goal-step">Curto prazo</span>
+                    <h3>Aprofundar em QA</h3>
+                    <p>Seguir me aprofundando em testes e qualidade, sempre atualizado com novas ferramentas e metodologias.</p>
                 </div>
-
-                <p class="textsobre">
-                    Sou Nicolas, tenho <span class="calculoIdade" id="idade"></span> anos, formado em Análise e Desenvolvimento de Sistemas (ADS) pela Faculdade das Américas (FAM). 
-                    Minha jornada na programação começou em 2019, quando iniciei o curso técnico em ADS, mas, devido à pandemia, não consegui finalizá-lo naquele momento. Contudo, 
-                    minha paixão pela tecnologia só aumentou, o que me motivou a concluir a graduação e me aprofundar na área.
-                </p>
-
-                <p class="textsobre">
-                    Atualmente, atuo como Tester/QA (Quality Assurance), o que me permite aplicar boas práticas de programação e garantir a qualidade em cada etapa do desenvolvimento de software. 
-                    Estou sempre em busca de aprimorar minhas habilidades técnicas e de gestão de qualidade, com foco em entregar soluções robustas e eficientes.
-                </p>
-                <p class="textsobre">
-                  Tenho objetivos bem definidos para meu crescimento profissional. A curto prazo, busco continuar me aprofundando em testes e qualidade, além de me manter atualizado com novas 
-                  ferramentas e metodologias. No médio prazo, desejo consolidar minha carreira, adquirir mais experiência em automação de testes e trabalhar em projetos de maior escala. 
-                  A longo prazo, meu objetivo é me tornar uma referência na área de qualidade de software e contribuir para o desenvolvimento de soluções inovadoras.
-                </p>
+                <div class="goal reveal" style="--delay:.1s">
+                    <span class="goal-step">Médio prazo</span>
+                    <h3>Automação & escala</h3>
+                    <p>Consolidar a carreira, ganhar experiência em automação de testes e atuar em projetos de maior escala.</p>
+                </div>
+                <div class="goal reveal" style="--delay:.2s">
+                    <span class="goal-step">Longo prazo</span>
+                    <h3>Ser referência</h3>
+                    <p>Tornar-me referência em qualidade de software e contribuir com soluções inovadoras.</p>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="boxEstudo">
-            <div class="boxFormacao">
-                <h1 class="titleFormacao">Formação Acadêmica</h1>
-                <p class="linhaFormacao">Ensino médio: (completo)</p>
-                <p class="linhaFormacao">
-                    Curso superior de tecnologia em Análise e Desenvolvimento de Sistemas 
-                    (<a class="linkPdf" href="Image/Certificados/Certificado de Conclusão Graduação - Individual - Chave - PL_Assinado.pdf" target="_blank">completo</a>)
-                </p>
+        <!-- ================= FORMAÇÃO ================= -->
+        <section class="container section-tight">
+            <div class="section-head reveal">
+                <span class="eyebrow">Formação</span>
+                <h2 class="section-title">Estudos & <span class="text-gradient">certificados</span></h2>
+                <p class="section-sub">Clique em um item concluído para abrir o certificado.</p>
             </div>
 
-            <div class="boxComplementares">
-                <h1 class="titleComplementares">Cursos Complementares</h1>
-                <p class="linhaFormacao">Curso de HTML e CSS básico: (<a class="linkPdf" href="Image/Certificados/Html básico - (Fundação Bradesco).pdf" target="_blank">completo</a>)</p>  
-                <p class="linhaFormacao">Curso de HTML avançado: (<a class="linkPdf" href="Image/Certificados/Html Avançado - (Fundação Bradesco).pdf" target="_blank">completo</a>)</p>  
-                <p class="linhaFormacao">Curso de JavaScript intermediário: (<a class="linkPdf" href="Image/Certificados/Introdução ao JavaScript (Intermediário) - Fundação Bradesco.pdf" target="_blank">completo</a>)</p>    
-                <p class="linhaFormacao">Curso de Java básico: (<a class="linkPdf" href="Image/Certificados/Java Basico (40 Horas Certificado Curso em Video).pdf" target="_blank">completo</a>)</p>
-                <p class="linhaFormacao">Curso de Banco de Dados - MySQL: (<a class="linkPdf" href="Image/Certificados/Banco de Dados - MySQL 40 Horas Certificado Curso em Video.pdf" target="_blank">completo</a>)</p>
-                <p class="linhaFormacao">Automação de Testes com Robot Framework - Básico: (<a class="linkPdf" href="Image/Certificados/Automação de Testes com Robot Framework - Básico.pdf" target="_blank">completo</a>)</p>
-                <p class="linhaFormacao">Formação Front-end - HTML, CSS, JavaScript, React e TypeScript com foco em React: (cursando)</p>  
-                <p class="linhaFormacao">Formação PHP do Zero a Maestria: (cursando)</p>  
+            <ol class="timeline">
+                <li class="reveal">
+                    <a class="tl-card" href="Image/Certificados/Certificado de Conclusão Graduação - Individual - Chave - PL_Assinado.pdf" target="_blank" rel="noopener">
+                        <span class="tl-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                        <div><h3>Tecnólogo em Análise e Desenvolvimento de Sistemas</h3><p>Faculdade das Américas (FAM)</p></div>
+                        <span class="pill done">Concluído ↗</span>
+                    </a>
+                </li>
+                <li class="reveal">
+                    <div class="tl-card">
+                        <span class="tl-icon"><i class="fa-brands fa-react"></i></span>
+                        <div><h3>Formação Front-end</h3><p>HTML, CSS, JavaScript, React e TypeScript (foco em React)</p></div>
+                        <span class="pill doing">Cursando</span>
+                    </div>
+                </li>
+                <li class="reveal">
+                    <div class="tl-card">
+                        <span class="tl-icon"><i class="fa-brands fa-php"></i></span>
+                        <div><h3>Formação PHP do Zero à Maestria</h3><p>Back-end com PHP</p></div>
+                        <span class="pill doing">Cursando</span>
+                    </div>
+                </li>
+            </ol>
+
+            <h3 class="certs-title reveal">Cursos complementares</h3>
+            <div class="certs">
+                <a class="cert reveal" href="Image/Certificados/Automação de Testes com Robot Framework - Básico.pdf" target="_blank" rel="noopener">
+                    <i class="fa-solid fa-robot"></i><span>Automação de Testes com Robot Framework</span><i class="fa-solid fa-arrow-up-right-from-square ext"></i>
+                </a>
+                <a class="cert reveal" href="Image/Certificados/Banco de Dados - MySQL 40 Horas Certificado Curso em Video.pdf" target="_blank" rel="noopener">
+                    <i class="fa-solid fa-database"></i><span>Banco de Dados — MySQL (40h)</span><i class="fa-solid fa-arrow-up-right-from-square ext"></i>
+                </a>
+                <a class="cert reveal" href="Image/Certificados/Java Basico (40 Horas Certificado Curso em Video).pdf" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-java"></i><span>Java Básico (40h)</span><i class="fa-solid fa-arrow-up-right-from-square ext"></i>
+                </a>
+                <a class="cert reveal" href="Image/Certificados/Introdução ao JavaScript (Intermediário) - Fundação Bradesco.pdf" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-js"></i><span>JavaScript Intermediário</span><i class="fa-solid fa-arrow-up-right-from-square ext"></i>
+                </a>
+                <a class="cert reveal" href="Image/Certificados/Html Avançado - (Fundação Bradesco).pdf" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-html5"></i><span>HTML Avançado</span><i class="fa-solid fa-arrow-up-right-from-square ext"></i>
+                </a>
+                <a class="cert reveal" href="Image/Certificados/Html e Css na prática - Fundação Bradesco.pdf" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-css3-alt"></i><span>HTML e CSS na prática</span><i class="fa-solid fa-arrow-up-right-from-square ext"></i>
+                </a>
+                <a class="cert reveal" href="Image/Certificados/Html básico - (Fundação Bradesco).pdf" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-html5"></i><span>HTML Básico</span><i class="fa-solid fa-arrow-up-right-from-square ext"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contatos" class="contact">
+        <div class="container">
+            <div class="contact-card reveal">
+                <span class="eyebrow">Contato</span>
+                <h2 class="section-title">Vamos construir <span class="text-gradient">algo juntos?</span></h2>
+                <p class="section-sub">Tem uma ideia, uma vaga ou só quer trocar uma ideia? Me chama — respondo rapidinho.</p>
+                <div class="contact-actions">
+                    <a href="mailto:nicolasalmeida1@yahoo.com" class="btn btn-primary"><i class="fa-regular fa-envelope"></i> nicolasalmeida1@yahoo.com</a>
+                    <a href="https://api.whatsapp.com/send?phone=5511941377733" target="_blank" rel="noopener" class="btn btn-ghost"><i class="fa-brands fa-whatsapp"></i> (11) 94137-7733</a>
+                </div>
+                <div class="socials">
+                    <a href="https://www.linkedin.com/in/nicolas-almeida-376284244/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/NicolasStudio" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/nicolas29sousa/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/nicolas.almeida.1042/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© <span class="year"></span> Nicolas de Almeida Sousa. Todos os direitos reservados.</span>
+                <a href="#">Voltar ao topo ↑</a>
             </div>
         </div>
-    </section>
-
-<section id="contatos">
-    <footer class="rodape">
-        <h1 class="titleRodape"> Alguma dúvida?</h1>
-        <p class="txtRodape"> Obrigado pela sua atenção, aqui estão alguns dos meus contatos:</p>
-        <p class="txtRodape"> Email: nicolasalmeida1@yahoo.com</p>
-        <p class="txtRodape"> WhatsApp: (11) 94137-7733</p>
-        <div class="boxRodapeImg">
-            <a href="https://www.linkedin.com/in/nicolas-almeida-376284244/"> <img class="redeImg" src="Image/linkedin2.png" alt="LinkedIn"> </a>
-            <a href="https://github.com/NicolasStudio"> <img class="redeImg" src="Image/github2.png" alt="GitHub"> </a>
-            <a href="https://www.instagram.com/nicolas29sousa/"> <img class="redeImg" src="Image/instagram2.png" alt="Instagram"> </a>
-            <a href="https://www.facebook.com/nicolas.almeida.1042/"> <img class="redeImg" src="Image/facebook2.png" alt="Facebook"> </a>
-            <a href="https://api.whatsapp.com/send?phone=11941377733"> <img class="redeImg" src="Image/whatsapp.png" alt="WhatsApp"> </a>
-        </div>
-        <p class="txtRodape">  ©Nicolas de Almeida Sousa. Todos os direitos reservados.</p>   
     </footer>
-</section>
+
 </body>
 </html>

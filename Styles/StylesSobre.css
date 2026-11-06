@@ -1,234 +1,231 @@
-:root {
---cor-fundo: #333;
---cor-fundo2: #f8f9fa;
---cor-texto: #ddd;
---cor-texto2: #2d3436;
---cor-destaque: #ff6b6b;
---cor-secundaria: #4ecdc4;
---cor-acento: #45b7d1;
---sombra: 0 4px 6px rgba(0, 0, 0, 0.1);
---transicao: all 0.3s ease;
+/* =========================================================
+   Sobre
+   ========================================================= */
+.about {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 56px;
+  align-items: start;
 }
 
-/* Animações */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.about-text p {
+  color: var(--text-2);
+  font-size: 17px;
+  margin-bottom: 18px;
 }
 
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
+.about-text strong { color: var(--text); font-weight: 600; }
+
+.about-text .lead {
+  font-size: 21px;
+  color: var(--text);
 }
 
-@keyframes typewriter {
-    from { width: 0; }
-    to { width: 100%; }
+#saudacaoTexto {
+  border-right: 3px solid var(--accent);
+  padding-right: 4px;
+  animation: caret 0.9s step-end infinite;
 }
 
-/* Seção Sobre */
-#sobre {
-    padding: 60px 5%;
-    background-color: #d4d4d4;
+@keyframes caret { 50% { border-color: transparent; } }
+
+/* ---------- Card de perfil ---------- */
+.profile-card {
+  position: sticky;
+  top: calc(var(--nav-h) + 24px);
+  padding: 28px;
+  border-radius: 24px;
+  background:
+    radial-gradient(300px 200px at 100% 0%, rgba(255, 106, 26, 0.2), transparent 70%),
+    var(--surface);
+  border: 1px solid var(--border);
+  text-align: center;
 }
 
-.boxSobre {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
+.profile-img {
+  width: 132px;
+  height: 132px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  object-fit: cover;
+  padding: 4px;
+  background: var(--gradient);
 }
 
-.titleSobre {
-    flex: 1;
-    min-width: 300px;
-    animation: fadeInUp 0.8s ease-out;
+.profile-card h2 { font-size: 22px; margin-bottom: 4px; }
+
+.profile-role {
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 22px;
 }
 
-.titleSobre2 {
-    font-size: 30px;
-    color: var(--cor-destaque);
-    margin-bottom: 30px;
-    text-align: center;
-    position: relative;
-    color: var(--cor-texto2);
-    padding-bottom: 5px;
+.profile-info {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 24px;
+  border-top: 1px solid var(--border);
 }
 
-.titleSobre2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    color: var(--cor-texto2);
-    transform: translateX(-50%);
-    width: 110px;
-    height: 4px;
-    background: var(--cor-destaque);
-    border-radius: 2px;
+.profile-info li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-2);
+  font-size: 15px;
 }
 
-.saudacao {
-    font-size: 22px;
-    font-weight: 600;
-    color: var(--cor-texto2);
-    margin-bottom: 20px;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 8px;
-    border-left: 4px solid var(--cor-destaque);
+.profile-info i { width: 18px; color: var(--accent); text-align: center; }
+
+/* ---------- Objetivos ---------- */
+.section-tight { padding-top: 100px; }
+
+.goals {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
-.textsobre {
-    text-align: justify;
-    font-size: 16px;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    padding: 15px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: var(--sombra);
-    transition: var(--transicao);
+.goal {
+  position: relative;
+  padding: 28px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.textsobre:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+.goal:hover { transform: translateY(-5px); border-color: rgba(255, 106, 26, 0.4); }
+
+.goal-step {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
 }
 
-.calculoIdade {
-    font-weight: bold;
-    color: var(--cor-destaque);
+.goal h3 { font-size: 21px; margin-bottom: 10px; }
+.goal p { color: var(--text-2); font-size: 15px; }
+
+/* ---------- Timeline ---------- */
+.timeline {
+  list-style: none;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 56px;
 }
 
-/* Seção Estudos */
-.boxEstudo {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-top: 50px;
-    padding-top: 40px;
-    border-top: 2px solid rgba(0, 0, 0, 0.1);
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(var(--accent), transparent);
 }
 
-.boxFormacao, .boxComplementares {
-    flex: 1;
-    min-width: 300px;
-    background: var(--cor-fundo);
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: var(--sombra);
-    transition: var(--transicao);
+.timeline li { position: relative; margin-bottom: 16px; }
+
+.timeline li::before {
+  content: '';
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  margin-top: -8px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 3px solid var(--accent);
 }
 
-.boxFormacao:hover, .boxComplementares:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+.tl-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px 22px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  text-decoration: none;
+  transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
-.titleFormacao, .titleComplementares {
-    font-size: 1.8rem;
-    color: var(--cor-destaque);
-    margin-bottom: 20px;
-    text-align: center;
-    position: relative;
-    padding-bottom: 10px;
-    font-size: 22px;
+a.tl-card:hover { border-color: var(--accent); transform: translateX(6px); }
+
+.tl-card > div { flex: 1; }
+.tl-card h3 { font-size: 18px; margin-bottom: 2px; }
+.tl-card p { color: var(--text-2); font-size: 14px; }
+
+.tl-icon {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 20px;
 }
 
-.titleFormacao::after, .titleComplementares::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 3px;
-    background: var(--cor-fundo2);
+.pill {
+  flex: 0 0 auto;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
 }
 
-.linhaFormacao {
-    font-size: 16px;
-    color: var(--cor-texto);
-    margin-bottom: 12px;
-    padding: 8px;
-    border-left: 3px solid transparent;
-    transition: var(--transicao);
-    cursor: pointer;
+.pill.done { background: rgba(61, 220, 132, 0.12); color: #3ddc84; }
+.pill.doing { background: rgba(255, 179, 71, 0.12); color: var(--accent-2); }
+
+/* ---------- Certificados ---------- */
+.certs-title { font-size: 22px; margin-bottom: 20px; }
+
+.certs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
 }
 
-.linhaFormacao:hover {
-    border-left-color: var(--cor-destaque);
-    background: rgba(255, 107, 107, 0.1);
-    padding-left: 15px;
+.cert {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border-radius: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.25s ease;
 }
 
-.linkPdf {
-    color: var(--cor-ddd);
-    text-decoration: none;
-    font-weight: 600;
-    position: relative;
-    transition: var(--transicao);
+.cert > i:first-child { color: var(--accent); font-size: 20px; width: 22px; text-align: center; }
+.cert span { flex: 1; }
+.cert .ext { color: var(--text-3); font-size: 13px; transition: color 0.25s ease; }
+
+.cert:hover { border-color: rgba(255, 106, 26, 0.45); background: var(--surface-2); }
+.cert:hover .ext { color: var(--accent); }
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 900px) {
+  .about { grid-template-columns: 1fr; }
+  .profile-card { position: static; max-width: 420px; }
+  .goals { grid-template-columns: 1fr; }
 }
 
-.linkPdf::after {
-    content: ' ↗';
-    font-size: 1.2em;
-}
-
-.linkPdf:hover {
-    color: var(--cor-destaque);
-}
-
-/* Progresso dos cursos */
-.progresso {
-    display: inline-block;
-    width: 100px;
-    height: 6px;
-    background: #e9ecef;
-    border-radius: 3px;
-    overflow: hidden;
-    margin-left: 10px;
-    vertical-align: middle;
-}
-
-.progresso-interno {
-    height: 100%;
-    background: linear-gradient(90deg, var(--cor-secundaria), var(--cor-acento));
-    width: 0;
-    transition: width 1.5s ease-in-out;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .boxSobre {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .titleSobre {
-        width: 100%;
-    }
-
-    .boxEstudo {
-        flex-direction: column;
-    }
-
-    .titleSobre2 {
-        font-size: 22px;
-    }
-
-    .textsobre {
-        font-size: 16px;
-        padding: 12px;
-    }
+@media (max-width: 600px) {
+  .section-tight { padding-top: 72px; }
+  .tl-card { flex-wrap: wrap; }
+  .tl-card .pill { margin-left: 66px; }
 }

@@ -2,95 +2,40 @@
 // Cálculo dinâmico da idade
 // ==============================
 function calcularIdade() {
-    const nascimento = new Date('1997-04-29');
+    const nascimento = new Date(1997, 3, 29); // 29/04/1997
     const hoje = new Date();
     let idade = hoje.getFullYear() - nascimento.getFullYear();
     const mes = hoje.getMonth() - nascimento.getMonth();
+    if (mes < 0 || (mes === 0 && hoje.getDate() < nascimento.getDate())) idade--;
 
-    if (mes < 0 || (mes === 0 && hoje.getDate() < nascimento.getDate())) {
-        idade--;
-    }
-
-    const spanIdade = document.getElementById('idade');
-    if (spanIdade) spanIdade.textContent = idade;
-    else console.error("Elemento com id 'idade' não encontrado.");
+    const span = document.getElementById('idade');
+    if (span) span.textContent = idade;
 }
 
 // ==============================
-// Saudação dinâmica com digitação
+// Saudação conforme o horário, com efeito de digitação
 // ==============================
-function atualizarSaudacao() {
+function saudacaoDoMomento() {
     const hora = new Date().getHours();
-    let saudacao = '';
-
-    if (hora >= 5 && hora < 12) saudacao = 'Bom dia! 🌅';
-    else if (hora >= 12 && hora < 18) saudacao = 'Boa tarde! ☀️';
-    else saudacao = 'Boa noite! 🌙';
-
-    // Sempre atualiza o localStorage com a saudação correta
-    localStorage.setItem('mensagem', saudacao);
-
-    typeWriter(saudacao);
+    if (hora >= 5 && hora < 12) return 'Bom dia! ☕';
+    if (hora >= 12 && hora < 18) return 'Boa tarde! ☀️';
+    return 'Boa noite! 🌙';
 }
 
-function typeWriter(text) {
-    const saudacaoElemento = document.getElementById('saudacaoTexto');
-    if (!saudacaoElemento) return console.error("Elemento com id 'saudacaoTexto' não encontrado.");
-
-    saudacaoElemento.textContent = ''; // Reseta o texto antes de digitar
+function digitar(el, texto) {
+    const letras = [...texto]; // respeita emojis
+    el.textContent = '';
     let i = 0;
-
-    function digitar() {
-        if (i < text.length) {
-            saudacaoElemento.textContent += text[i];
-            i++;
-            setTimeout(digitar, 50);
+    (function passo() {
+        if (i < letras.length) {
+            el.textContent += letras[i++];
+            setTimeout(passo, 70);
         }
-    }
-
-    digitar();
+    })();
 }
 
-// ==============================
-// Animar barras de progresso
-// ==============================
-function animarBarrasProgresso() {
-    document.querySelectorAll('.progresso-interno').forEach(barra => {
-        const progresso = barra.getAttribute('data-progress');
-        setTimeout(() => barra.style.width = progresso + '%', 500);
-    });
-}
-
-// ==============================
-// Observador de elementos para animações
-// ==============================
-function observarElementos() {
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.textsobre, .boxFormacao, .boxComplementares').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
-    });
-}
-
-// ==============================
-// Inicialização
-// ==============================
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
     calcularIdade();
-    atualizarSaudacao();
-    animarBarrasProgresso();
-    observarElementos();
-
-    // Atualiza a saudação a cada minuto
-    setInterval(atualizarSaudacao, 60000);
+    const el = document.getElementById('saudacaoTexto');
+    if (el) digitar(el, saudacaoDoMomento());
 });
