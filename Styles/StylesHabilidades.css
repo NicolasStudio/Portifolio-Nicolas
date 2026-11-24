@@ -102,6 +102,36 @@
 .soft h3 { font-size: 22px; margin-bottom: 6px; }
 .soft p { color: var(--text-2); }
 
+.soft { align-items: flex-start; }
+.soft h3 { margin-bottom: 14px; }
+
+.qa-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 32px;
+}
+
+.qa-list li {
+  position: relative;
+  padding-left: 20px;
+  color: var(--text-2);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.qa-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
 @media (max-width: 600px) {
-  .soft { flex-direction: column; text-align: center; padding: 28px 20px; }
+  .soft { flex-direction: column; padding: 28px 20px; }
+  .qa-list { grid-template-columns: 1fr; }
 }

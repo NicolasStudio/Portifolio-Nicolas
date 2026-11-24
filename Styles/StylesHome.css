@@ -80,32 +80,10 @@
 }
 
 .hero-title {
-  font-size: clamp(42px, 7vw, 84px);
+  color: var(--accent);
+  font-size: clamp(38px, 5.4vw, 68px);
   font-weight: 700;
   margin-bottom: 18px;
-}
-
-.hero-hello {
-  display: block;
-  font-size: 0.42em;
-  font-weight: 500;
-  color: var(--text-2);
-  letter-spacing: -0.01em;
-  margin-bottom: 10px;
-}
-
-.hero-wave {
-  display: inline-block;
-  transform-origin: 70% 70%;
-  animation: wave 2.4s ease-in-out 1s 2;
-}
-
-@keyframes wave {
-  0%, 60%, 100% { transform: rotate(0); }
-  10%, 30% { transform: rotate(14deg); }
-  20% { transform: rotate(-8deg); }
-  40% { transform: rotate(-4deg); }
-  50% { transform: rotate(10deg); }
 }
 
 .hero-role {
@@ -185,6 +163,7 @@
 
 .photo-frame img {
   width: 100%;
+  height: auto;
   aspect-ratio: 4 / 5;
   object-fit: cover;
   border-radius: 22px;

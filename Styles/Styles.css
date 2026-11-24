@@ -12,7 +12,7 @@
   --border-strong: rgba(255, 255, 255, 0.16);
   --text: #f2f2f5;
   --text-2: #a6a6b3;
-  --text-3: #6f6f7d;
+  --text-3: #8a8a96;
   --accent: #ff6a1a;
   --accent-2: #ffb347;
   --accent-soft: rgba(255, 106, 26, 0.12);
@@ -101,7 +101,7 @@ h1, h2, h3, h4 {
   align-items: center;
   gap: 10px;
   font-family: var(--font-display);
-  font-size: 13px;
+  font-size: 18px;
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -109,13 +109,6 @@ h1, h2, h3, h4 {
   margin-bottom: 14px;
 }
 
-.eyebrow::before {
-  content: '';
-  width: 28px;
-  height: 2px;
-  background: var(--gradient);
-  border-radius: 2px;
-}
 
 .section-title {
   font-size: clamp(32px, 4.5vw, 52px);
